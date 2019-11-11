@@ -12,7 +12,7 @@
             >> Puntaje Maximo aumenta +1 si el numero es menor a Puntaje
             >> al clickear CONTINUAR se activa la funcion random pero ahora elije dos numeros (colores)
             >> se ilumina un color con un cambio de clase (timer), se ilumina el otro
-        >> si se presiona otro color 
+        >> si se presiona otro color:
             >> mensaje: Incorrecto! Vuelve a empezar
             >> se resetea Puntaje
             >> Puntaje Maximo guarda el numero mas alto de Puntaje, y si es mas alto le cambia el valor y lo guarda
