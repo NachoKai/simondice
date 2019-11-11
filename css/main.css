@@ -152,6 +152,9 @@ footer {
   font-size: 25px;
   line-height: 110%;
 }
+#start:active {
+height: 44px;
+}
 
 .button:focus {
   outline: 0;
@@ -189,14 +192,17 @@ footer {
 /* inputs */
 
 #mensaje {
+  width: 60%;
   background: white;
 }
 
 #puntaje {
+  width: 150px;
   background: white;
 }
 
 #pmaximo {
+  width: 150px;
   background: white;
 }
 
