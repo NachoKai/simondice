@@ -1,0 +1,159 @@
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 16px;
+}
+
+.grid-container {
+  background: black;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "sector1" "sector2" "sector3" "sector4";
+}
+
+.sector1 {
+  padding: 10px;
+  margin: 10px;
+  background: orange;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "puntaje start pmaximo";
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sector1;
+}
+
+.puntaje {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: puntaje;
+}
+
+.start {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: start;
+}
+
+.pmaximo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: pmaximo;
+}
+
+.sector2 {
+  padding: 10px;
+  margin: 10px;
+  background: orangered;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "rojo verde" "azul amarillo";
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sector2;
+}
+
+.rojo {
+  background: #ed1b24;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: rojo;
+}
+
+.verde {
+  background: #23b14d;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: verde;
+}
+
+.azul {
+  background: #00a3e8;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: azul;
+}
+
+.amarillo {
+  background: #fef200;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: amarillo;
+}
+
+.sector3 {
+  padding: 10px;
+  margin: 10px;
+  background: aquamarine;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "reiniciar continuar";
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: sector3;
+}
+
+.reiniciar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: reiniciar;
+}
+
+.continuar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: continuar;
+}
+
+.sector4 {
+  padding: 10px;
+  margin: 10px;
+  background: chartreuse;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "mensaje";
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: sector4;
+}
+
+.mensaje {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: mensaje;
+}
+/*# sourceMappingURL=main.css.map */
