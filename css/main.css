@@ -15,6 +15,13 @@ body {
 }
 
 .grid-container {
+  justify-content: center;
+  padding: 10px;
+  display: flex;
+  height: 90vh;
+  width: 99vw;;
+  align-items: center;
+  justify-content: space-around;
   color: white;
   display: flex;
   flex-direction: column;
@@ -24,13 +31,17 @@ body {
 }
 
 .sector1 {
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
   color: #000000;
   justify-content: space-around;
   align-items: center;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 5px;
+  margin: 5px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "puntaje start pmaximo";
@@ -38,16 +49,19 @@ body {
 }
 
 .puntaje {
+  text-align: center;
   font-weight: bold;
   grid-area: puntaje;
 }
 
 .start {
+  text-align: center;
   font-weight: bold;
   grid-area: start;
 }
 
 .pmaximo {
+  text-align: center;
   font-weight: bold;
   grid-area: pmaximo;
 }
@@ -62,10 +76,13 @@ body {
 }
 
 .sector2 {
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem 3rem;
   display: grid;
-  padding: 10px;
-  margin: 10px;
-  width: 500px;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
   height: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -90,12 +107,15 @@ body {
 }
 
 .sector3 {
-  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
   align-items: center;
   justify-content: space-around;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
+  padding: 5px;
+  margin: 5px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "reiniciar continuar";
@@ -111,11 +131,15 @@ body {
 }
 
 .sector4 {
-  flex-wrap: wrap;
-  color: #000000;
-  padding: 10px;
-  margin: 10px;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem 3rem;
   display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  color: #000000;
+  padding: 5px;
+  margin: 5px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "mensaje";
@@ -229,7 +253,6 @@ footer {
   width: 150px;
   background: white;
 }
-
 
 /* boton rojo */
 .boton-rojo {
@@ -362,4 +385,19 @@ footer {
   background: #fff75c;
   z-index: 99;
   position: relative;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
