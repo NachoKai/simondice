@@ -1,9 +1,9 @@
 /*
-*START para correr el programa
-    >> Mensaje muestra: Suerte! >> (timer)
-    >> Mensaje muestra: Es el turno de la computadora...
-    >> una funcion elige un random entre 1 y 4 (asignarle un numero a cada color?) y elige uno de los colores
-    >> se ilumina el color con un cambio de clase >> (timer)
+YA *START para correr el programa
+YA    >> Mensaje muestra: Suerte! >> (timer)
+YA    >> Mensaje muestra: Es el turno de la computadora...
+YA    >> una funcion elige un random entre 1 y 4 (asignarle un numero a cada color?) y elige uno de los colores
+YA    >> se ilumina el color con un cambio de clase >> (timer para cuando tenga que elegir el siguiente color)
     >> Mensaje muestra: Es tu turno...
         >> si se presiona el mismo color: 
             >> Mensaje: Correcto! Haz click en CONTINUAR
@@ -16,9 +16,9 @@
             >> se resetea Puntaje
             >> Puntaje Maximo guarda el numero mas alto de Puntaje, y si es mas alto le cambia el valor y lo guarda
 
-*REINICIAR borra el Puntaje y comienza a correr el programa de nuevo, no borra Puntaje Maximo.
-*/
+*REINICIAR borra el Puntaje y comienza a correr el programa de nuevo, no borra Puntaje Maximo. */
 
+/* VARIABLES */
 const $form = document.querySelector("#form")
 
 let puntaje = $form.querySelector("#puntaje")
@@ -35,26 +35,33 @@ let continuar = $form.querySelector("#continuar")
 
 let mensaje = $form.querySelector("#mensaje")
 
+/* MAIN */
+
 $form.start.onclick = function () {
     mostrarMensajeSuerte()
 }
 
+$form.reiniciar.onclick = function () {
+    reiniciarJuego()
+}
+
+/* FUNCIONES */
+
 function mostrarMensajeSuerte() {
     let nodoMensaje = $form.mensaje
     let nodoPuntaje = $form.puntaje
-    nodoMensaje.className = ('mensajeWin')
+    nodoMensaje.className = ('')
     nodoMensaje.value = 'Suerte!'
     nodoPuntaje.value = 0
     setTimeout(function () {
-        nodoMensaje.value = 'Es el turno de la computadora...'
-    }, 1500)
+        mostrarMensajeTurnoPc()
+    }, 1000)
     setTimeout(function () {
         eligeRandom()
-    }, 1500)
-}
-
-$form.reiniciar.onclick = function () {
-    reiniciarJuego()
+    }, 1000)
+    setTimeout(function () {
+        mostrarMensajeTuTurno()
+    }, 2500)
 }
 
 function reiniciarJuego() {
@@ -63,6 +70,13 @@ function reiniciarJuego() {
     nodoMensaje.className = ('mensajeLose')
     nodoMensaje.value = 'Juego reiniciado'
     nodoPuntaje.value = 0
+}
+
+function mostrarMensajeTurnoPc() {
+    let nodoMensaje = $form.mensaje
+    setTimeout(function () {
+        nodoMensaje.value = 'Es el turno de la computadora...'
+    }, 1500)
 }
 
 function eligeRandom() {
@@ -77,27 +91,43 @@ function eligeRandom() {
     let numeroRandom = Math.floor((Math.random() * 4) + 1);
 
     if (numeroRandom === eligeRojo) {
-        nodoRojo.className = ('rojoActivado')
+        setTimeout(function () {
+            nodoRojo.className = ('rojoActivado')
+        }, 1500)
         setTimeout(function () {
             nodoRojo.className = ('boton-rojo')
-        }, 1000)
+        }, 2500)
     }
     if (numeroRandom === eligeVerde) {
-        nodoVerde.className = ('verdeActivado')
+        setTimeout(function () {
+            nodoVerde.className = ('verdeActivado')
+        }, 1500)
         setTimeout(function () {
             nodoVerde.className = ('boton-verde')
-        }, 1000)
+        }, 2500)
     }
     if (numeroRandom === eligeAzul) {
-        nodoAzul.className = ('azulActivado')
+        setTimeout(function () {
+            nodoAzul.className = ('azulActivado')
+        }, 1500)
         setTimeout(function () {
             nodoAzul.className = ('boton-azul')
-        }, 1000)
+        }, 2500)
     }
     if (numeroRandom === eligeAmarillo) {
-        nodoAmarillo.className = ('amarilloActivado')
+        setTimeout(function () {
+            nodoAmarillo.className = ('amarilloActivado')
+        }, 1500)
         setTimeout(function () {
             nodoAmarillo.className = ('boton-amarillo')
-        }, 1000)
+        }, 2500)
     }
+}
+
+function mostrarMensajeTuTurno() {
+    let nodoMensaje = $form.mensaje
+    setTimeout(function () {
+        nodoMensaje.className = ('')
+        nodoMensaje.value = 'Es tu turno!'
+    }, 1500)
 }
