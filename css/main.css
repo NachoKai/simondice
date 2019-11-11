@@ -124,7 +124,6 @@ body {
 }
 
 .mensaje {
-  text-align: left;
   grid-area: mensaje;
 }
 
@@ -192,7 +191,7 @@ height: 44px;
 /* inputs */
 
 #mensaje {
-  width: 60%;
+  min-width: 300px;
   background: white;
 }
 
