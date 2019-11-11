@@ -120,9 +120,13 @@ body {
 }
 
 .mensaje {
+  width: 100%;
   color: #000000;
   font-size: 20px;
   grid-area: mensaje;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .mensajeWin {
@@ -202,6 +206,9 @@ footer {
   color: #000000;
   min-width: 300px;
   background: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #puntaje {
