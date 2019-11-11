@@ -31,7 +31,6 @@ body {
 }
 
 .sector1 {
-  justify-content: center;
   background-color: #ffffff;
   padding: 2rem 3rem;
   display: flex;
