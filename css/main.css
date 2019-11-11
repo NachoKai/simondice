@@ -24,7 +24,6 @@ body {
 }
 
 .sector1 {
-  background: chartreuse;
   color: #000000;
   justify-content: space-around;
   align-items: center;
@@ -60,7 +59,6 @@ body {
 }
 
 .sector2 {
-  background: chocolate;
   display: grid;
   padding: 10px;
   margin: 10px;
@@ -89,7 +87,6 @@ body {
 }
 
 .sector3 {
-  background: cornflowerblue;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
@@ -111,7 +108,6 @@ body {
 }
 
 .sector4 {
-  background: darkcyan;
   flex-wrap: wrap;
   color: #000000;
   padding: 10px;
@@ -124,7 +120,17 @@ body {
 }
 
 .mensaje {
+  color: #000000;
+  font-size: 20px;
   grid-area: mensaje;
+}
+
+.mensajeWin {
+  background: #00ff6a;
+}
+
+.mensajeLose {
+  background: #ff0000;
 }
 
 footer {
@@ -149,10 +155,11 @@ footer {
 
 #start {
   font-size: 25px;
-  line-height: 110%;
+  line-height: 105%;
 }
+
 #start:active {
-height: 44px;
+  height: 44px;
 }
 
 .button:focus {
@@ -191,6 +198,8 @@ height: 44px;
 /* inputs */
 
 #mensaje {
+  font-size: 20px;
+  color: #000000;
   min-width: 300px;
   background: white;
 }
@@ -206,7 +215,7 @@ height: 44px;
 }
 
 
-  /* boton rojo */
+/* boton rojo */
 .boton-rojo {
   height: 100%;
   width: 100%;
@@ -216,10 +225,12 @@ height: 44px;
   align-self: center;
   background: #ed1b24;
 }
+
 .boton-rojo:active {
   height: 98%;
   width: 98%;
 }
+
 .boton-rojo:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
   background: #ed1b24;
@@ -236,10 +247,12 @@ height: 44px;
   line-height: 150%;
   background: #23b14d;
 }
+
 .boton-verde:active {
   height: 98%;
   width: 98%;
 }
+
 .boton-verde:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
   background: #23b14d;
@@ -256,10 +269,12 @@ height: 44px;
   line-height: 150%;
   background: #00a3e8;
 }
+
 .boton-azul:active {
   height: 98%;
   width: 98%;
 }
+
 .boton-azul:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
   background: #00a3e8;
@@ -276,11 +291,59 @@ height: 44px;
   line-height: 150%;
   background: #fef200;
 }
+
 .boton-amarillo:active {
   height: 98%;
   width: 98%;
 }
+
 .boton-amarillo:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
   background: #fef200;
+}
+
+/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+
+/* boton rojo activado */
+.rojoActivado {
+  height: 105%;
+  width: 105%;
+  align-self: center;
+  background: #ff5d65;
+  z-index: 99;
+  position: relative;
+}
+
+
+/* boton verde activado */
+.verdeActivado {
+  height: 105%;
+  width: 105%;
+  align-self: center;
+  line-height: 150%;
+  background: #61d182;
+  z-index: 99;
+  position: relative;
+}
+
+/* boton azul activado */
+.azulActivado {
+  height: 105%;
+  width: 105%;
+  align-self: center;
+  line-height: 150%;
+  background: #54bfec;
+  z-index: 99;
+  position: relative;
+}
+
+/* boton amarillo activado */
+.amarilloActivado {
+  height: 105%;
+  width: 105%;
+  align-self: center;
+  line-height: 150%;
+  background: #fff75c;
+  z-index: 99;
+  position: relative;
 }
