@@ -10,150 +10,272 @@
   font-size: 16px;
 }
 
+body {
+  background: white;
+}
+
 .grid-container {
-  background: black;
   color: white;
-  padding: 10px;
-  margin: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "sector1" "sector2" "sector3" "sector4";
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "sector1""sector2""sector3""sector4";
 }
 
 .sector1 {
+  background: chartreuse;
+  color: #000000;
+  justify-content: space-around;
+  align-items: center;
   padding: 10px;
   margin: 10px;
-  background: orange;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "puntaje start pmaximo";
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "puntaje start pmaximo";
   grid-area: sector1;
 }
 
 .puntaje {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: puntaje;
 }
 
 .start {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: start;
 }
 
 .pmaximo {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: pmaximo;
 }
 
+.colores {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
 .sector2 {
+  background: chocolate;
+  display: grid;
   padding: 10px;
   margin: 10px;
-  background: orangered;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "rojo verde" "azul amarillo";
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  width: 500px;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "rojo verde""azul amarillo";
   grid-area: sector2;
 }
 
 .rojo {
-  background: #ed1b24;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: rojo;
 }
 
 .verde {
-  background: #23b14d;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: verde;
 }
 
 .azul {
-  background: #00a3e8;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: azul;
 }
 
 .amarillo {
-  background: #fef200;
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: amarillo;
 }
 
 .sector3 {
+  background: cornflowerblue;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
   padding: 10px;
   margin: 10px;
-  background: aquamarine;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "reiniciar continuar";
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "reiniciar continuar";
   grid-area: sector3;
 }
 
 .reiniciar {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: reiniciar;
 }
 
 .continuar {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: continuar;
 }
 
 .sector4 {
+  background: darkcyan;
+  flex-wrap: wrap;
+  color: #000000;
   padding: 10px;
   margin: 10px;
-  background: chartreuse;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "mensaje";
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
+  display: flex;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "mensaje";
   grid-area: sector4;
 }
 
 .mensaje {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  text-align: left;
   grid-area: mensaje;
 }
-/*# sourceMappingURL=main.css.map */
+
+footer {
+  height: 40px;
+  font-size: 15px;
+}
+
+.link {
+  font-size: 18px;
+  color: white;
+}
+
+.link:hover {
+  color: white;
+}
+
+.link:active {
+  font-size: 16px;
+}
+
+/* botones */
+
+#start {
+  font-size: 25px;
+  line-height: 110%;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button {
+  font-size: 15px;
+  display: inline-block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  height: 40px;
+  align-self: center;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  line-height: 150%;
+  background: rgb(221, 135, 54);
+}
+
+.button:active {
+  height: 36px;
+}
+
+.button:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
+  background: rgb(224, 112, 6);
+}
+
+/* inputs */
+
+#mensaje {
+  background: white;
+}
+
+#puntaje {
+  background: white;
+}
+
+#pmaximo {
+  background: white;
+}
+
+
+  /* boton rojo */
+.boton-rojo {
+  height: 100%;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  background: #ed1b24;
+}
+.boton-rojo:active {
+  height: 98%;
+  width: 98%;
+}
+.boton-rojo:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
+  background: #ed1b24;
+}
+
+/* boton verde */
+.boton-verde {
+  height: 100%;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  line-height: 150%;
+  background: #23b14d;
+}
+.boton-verde:active {
+  height: 98%;
+  width: 98%;
+}
+.boton-verde:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
+  background: #23b14d;
+}
+
+/* boton azul */
+.boton-azul {
+  height: 100%;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  line-height: 150%;
+  background: #00a3e8;
+}
+.boton-azul:active {
+  height: 98%;
+  width: 98%;
+}
+.boton-azul:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
+  background: #00a3e8;
+}
+
+/* boton amarillo */
+.boton-amarillo {
+  height: 100%;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  line-height: 150%;
+  background: #fef200;
+}
+.boton-amarillo:active {
+  height: 98%;
+  width: 98%;
+}
+.boton-amarillo:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
+  background: #fef200;
+}

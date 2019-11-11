@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Titulo</title>
+    <title>Simon dice! Nacho Caiafa</title>
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,33 +15,42 @@
 
 <body>
 
-    <div class="grid-container">contenedor
+    <div class="grid-container">
         <div class="sector1">
             <div class="puntaje">Puntaje:
                 <input type="text" name="puntaje" id="puntaje" disabled>
             </div>
             <div class="start">
-                <input type="button" value="START" id="start">
+                <input type="button" value="START" id="start" class="button">
             </div>
             <div class="pmaximo">Puntaje Maximo:
                 <input type="text" name="pmaximo" id="pmaximo" disabled>
             </div>
         </div>
-        <div class="sector2">
-            <div class="rojo">rojo</div>
-            <div class="verde">verde</div>
-            <div class="azul">azul</div>
-            <div class="amarillo">amarillo</div>
-        </div>
-        <div class="sector3">
-            <div class="reiniciar"><input type="button" value="REINICIAR" id="reiniciar"></div>
-            <div class="continuar"><input type="button" value="CONTINUAR" id="continuar"></div>
-        </div>
-        <div class="sector4">
-            <div class="mensaje">Mensaje:
-                <input type="text" name="puntaje" id="puntaje" disabled>
+
+        <div class="colores">
+            <div class="sector2">
+                <div class="rojo"><input type="text" class="boton-rojo" disabled></div>
+                <div class="verde"><input type="text" class="boton-verde" disabled></div>
+                <div class="azul"><input type="text" class="boton-azul" disabled></div>
+                <div class="amarillo"><input type="text" class="boton-amarillo" disabled></div>
             </div>
         </div>
+
+        <div class="sector3">
+            <div class="reiniciar"><input type="button" value="REINICIAR" id="reiniciar" class="button"></div>
+            <div class="continuar"><input type="button" value="CONTINUAR" id="continuar" class="button"></div>
+        </div>
+
+        <div class="sector4">
+            <div class="mensaje">Mensaje:
+                <input type="text" name="mensaje" id="mensaje" disabled>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer><a href="https://github.com/NachoKai" class="link">Nacho Caiafa</a></footer>
     </div>
 
     <!-- JavaScript -->
