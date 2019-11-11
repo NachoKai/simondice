@@ -38,14 +38,17 @@ body {
 }
 
 .puntaje {
+  font-weight: bold;
   grid-area: puntaje;
 }
 
 .start {
+  font-weight: bold;
   grid-area: start;
 }
 
 .pmaximo {
+  font-weight: bold;
   grid-area: pmaximo;
 }
 
@@ -120,6 +123,7 @@ body {
 }
 
 .mensaje {
+  font-weight: bold;
   width: 100%;
   color: #000000;
   font-size: 20px;
@@ -202,6 +206,8 @@ footer {
 /* inputs */
 
 #mensaje {
+  width: 100%;
+  border: none;
   font-size: 20px;
   color: #000000;
   background: white;
@@ -211,11 +217,15 @@ footer {
 }
 
 #puntaje {
+  text-align: left;
+  border: none;
   width: 150px;
   background: white;
 }
 
 #pmaximo {
+  text-align: left;
+  border: none;
   width: 150px;
   background: white;
 }
