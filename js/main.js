@@ -20,8 +20,6 @@ YA    >> Mensaje muestra: Es tu turno...
 
 ////////////////////////////////////////
 
-
-////////////////////////////////////////
 /* VARIABLES */
 const $form = document.querySelector("#form")
 
