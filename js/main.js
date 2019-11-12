@@ -39,6 +39,9 @@ let continuar = $form.querySelector("#continuar")
 
 let mensaje = $form.querySelector("#mensaje")
 
+let orden = []
+let ordenJugador = []
+
 /* MAIN */
 
 $form.start.onclick = function () {
@@ -80,10 +83,6 @@ function reiniciarJuego() {
     nodoPuntaje.value = 0
 }
 
-function iteracionDeRandoms() {
-
-}
-
 function mostrarMensajeTurnoPc() {
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
@@ -100,13 +99,13 @@ function eligeRandom() {
     let eligeVerde = 2
     let eligeAzul = 3
     let eligeAmarillo = 4
-    let orden = [];
-    let numeroRandom = iteracionDeRandoms();
+
+    let numeroRandom = iteracionDeRandoms()
 
     function iteracionDeRandoms() {
         for (let i = 0; i < 25; i++) {
             orden.push(Math.floor(Math.random() * 4) + 1);
-            return(orden[i])
+            return (orden[i])
         }
     }
 
@@ -150,4 +149,24 @@ function mostrarMensajeTuTurno() {
         nodoMensaje.className = ('')
         nodoMensaje.value = 'Es tu turno!'
     }, 1500)
+}
+
+function turnoJugador(){
+    if (ordenJugador === orden){
+        nodoMensaje.value = 'Correcto! Presiona CONTINUAR'
+    }
+}
+turnoJugador()
+
+$form.rojo.onclick = function () {
+    return ordenJugador.push(1)
+}
+$form.verde.onclick = function () {
+    return ordenJugador.push(2)
+}
+$form.azul.onclick = function () {
+    return ordenJugador.push(3)
+}
+$form.amarillo.onclick = function () {
+    return ordenJugador.push(4)
 }

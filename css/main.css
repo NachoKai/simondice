@@ -218,6 +218,15 @@ footer {
   background: rgb(221, 135, 54);
 }
 
+input {
+  color: transparent;
+  text-shadow: 0 0 0 #2196f3;
+
+  &:focus {
+      outline: none;
+  }
+}
+
 .button:active {
   height: 36px;
 }
