@@ -53,7 +53,7 @@ $form.reiniciar.onclick = function () {
 }
 
 $form.continuar.onclick = function () {
-
+    eligeRandom()
 }
 
 /* FUNCIONES */
@@ -73,6 +73,7 @@ function mostrarMensajeSuerte() {
     setTimeout(function () {
         mostrarMensajeTuTurno()
     }, 2300)
+    turnoJugador()
 }
 
 function reiniciarJuego() {
@@ -99,7 +100,6 @@ function eligeRandom() {
     let eligeVerde = 2
     let eligeAzul = 3
     let eligeAmarillo = 4
-
     let numeroRandom = iteracionDeRandoms()
 
     function iteracionDeRandoms() {
@@ -151,12 +151,12 @@ function mostrarMensajeTuTurno() {
     }, 1500)
 }
 
-function turnoJugador(){
-    if (ordenJugador === orden){
+function turnoJugador() {
+    if (ordenJugador === orden) {
         nodoMensaje.value = 'Correcto! Presiona CONTINUAR'
+        nodoPuntaje = puntaje + 1
     }
 }
-turnoJugador()
 
 $form.rojo.onclick = function () {
     return ordenJugador.push(1)
@@ -170,3 +170,4 @@ $form.azul.onclick = function () {
 $form.amarillo.onclick = function () {
     return ordenJugador.push(4)
 }
+
