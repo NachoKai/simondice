@@ -5,9 +5,9 @@ YA    >> Mensaje muestra: Es el turno de la computadora...
 YA    >> una funcion elige un random entre 1 y 4 (asignarle un numero a cada color?) y elige uno de los colores
 YA    >> se ilumina el color con un cambio de clase >> (timer para cuando tenga que elegir el siguiente color)
 YA    >> Mensaje muestra: Es tu turno...
-        >> si se presiona el mismo color: 
-            >> Mensaje: Correcto! Haz click en CONTINUAR
-            >> Puntaje aumenta +1
+ERR        >> si se presiona el mismo color: 
+ERR            >> Mensaje: Correcto! Haz click en CONTINUAR
+ERR            >> Puntaje aumenta +1
             >> Puntaje Maximo aumenta +1 si el numero es menor a Puntaje
             >> al clickear CONTINUAR se activa la funcion random pero ahora elije dos numeros (colores)
             >> se ilumina un color con un cambio de clase (timer), se ilumina el otro
