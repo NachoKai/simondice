@@ -18,6 +18,10 @@ YA    >> Mensaje muestra: Es tu turno...
 
 *REINICIAR borra el Puntaje y comienza a correr el programa de nuevo, no borra Puntaje Maximo. */
 
+////////////////////////////////////////
+
+
+////////////////////////////////////////
 /* VARIABLES */
 const $form = document.querySelector("#form")
 
@@ -46,7 +50,7 @@ $form.reiniciar.onclick = function () {
 }
 
 $form.continuar.onclick = function () {
-    pruebaIteracionDeRandoms()
+
 }
 
 /* FUNCIONES */
@@ -59,13 +63,13 @@ function mostrarMensajeSuerte() {
     nodoPuntaje.value = 0
     setTimeout(function () {
         mostrarMensajeTurnoPc()
-    }, 1000)
+    }, 500)
     setTimeout(function () {
         eligeRandom()
-    }, 1000)
+    }, 800)
     setTimeout(function () {
         mostrarMensajeTuTurno()
-    }, 2500)
+    }, 2300)
 }
 
 function reiniciarJuego() {
@@ -76,15 +80,8 @@ function reiniciarJuego() {
     nodoPuntaje.value = 0
 }
 
-function pruebaIteracionDeRandoms() {
-    let nodoMensaje = $form.mensaje
-    nodoMensaje.value = iteracionDeRandoms()
+function iteracionDeRandoms() {
 
-    function iteracionDeRandoms() {
-        for (let i = "#"; i.length < 8; i += "#") {
-            return i
-        }
-    }
 }
 
 function mostrarMensajeTurnoPc() {
@@ -103,7 +100,15 @@ function eligeRandom() {
     let eligeVerde = 2
     let eligeAzul = 3
     let eligeAmarillo = 4
-    let numeroRandom = Math.floor((Math.random() * 4) + 1);
+    let orden = [];
+    let numeroRandom = iteracionDeRandoms();
+
+    function iteracionDeRandoms() {
+        for (let i = 0; i < 25; i++) {
+            orden.push(Math.floor(Math.random() * 4) + 1);
+            return(orden[i])
+        }
+    }
 
     if (numeroRandom === eligeRojo) {
         setTimeout(function () {

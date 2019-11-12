@@ -19,7 +19,8 @@ body {
   padding: 10px;
   display: flex;
   height: 90vh;
-  width: 99vw;;
+  width: 99vw;
+  ;
   align-items: center;
   justify-content: space-around;
   color: white;
@@ -265,13 +266,13 @@ footer {
 }
 
 .boton-rojo:active {
-  height: 98%;
-  width: 98%;
+  background: #d31721;
+  height: 96%;
+  width: 96%;
 }
 
 .boton-rojo:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-  background: #ed1b24;
 }
 
 /* boton verde */
@@ -287,13 +288,13 @@ footer {
 }
 
 .boton-verde:active {
-  height: 98%;
-  width: 98%;
+  background: #1ca144;
+  height: 96%;
+  width: 96%;
 }
 
 .boton-verde:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-  background: #23b14d;
 }
 
 /* boton azul */
@@ -309,13 +310,13 @@ footer {
 }
 
 .boton-azul:active {
-  height: 98%;
-  width: 98%;
+  background: #0094d3;
+  height: 96%;
+  width: 96%;
 }
 
 .boton-azul:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-  background: #00a3e8;
 }
 
 /* boton amarillo */
@@ -331,57 +332,56 @@ footer {
 }
 
 .boton-amarillo:active {
-  height: 98%;
-  width: 98%;
+  background: #e6da00;
+  height: 96%;
+  width: 96%;
 }
 
 .boton-amarillo:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-  background: #fef200;
 }
 
 /* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
 
 /* boton rojo activado */
 .rojoActivado {
-  height: 105%;
-  width: 105%;
+  height: 110%;
+  width: 110%;
   align-self: center;
-  background: #ff5d65;
+  background: #ff636b;
   z-index: 99;
   position: relative;
 }
 
-
 /* boton verde activado */
 .verdeActivado {
-  height: 105%;
-  width: 105%;
+  height: 110%;
+  width: 110%;
   align-self: center;
   line-height: 150%;
-  background: #61d182;
+  background: #6be28f;
   z-index: 99;
   position: relative;
 }
 
 /* boton azul activado */
 .azulActivado {
-  height: 105%;
-  width: 105%;
+  height: 110%;
+  width: 110%;
   align-self: center;
   line-height: 150%;
-  background: #54bfec;
+  background: #5fc8f5;
   z-index: 99;
   position: relative;
 }
 
 /* boton amarillo activado */
 .amarilloActivado {
-  height: 105%;
-  width: 105%;
+  height: 110%;
+  width: 110%;
   align-self: center;
   line-height: 150%;
-  background: #fff75c;
+  background: #fff764;
   z-index: 99;
   position: relative;
 }
@@ -391,12 +391,15 @@ footer {
 ::-webkit-scrollbar {
   width: 15px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
