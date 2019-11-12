@@ -152,9 +152,11 @@ function mostrarMensajeTuTurno() {
 }
 
 function turnoJugador() {
-    if (ordenJugador === orden) {
+    if (ordenJugador[ordenJugador.length - 1] == orden[orden.length - 1]) {
         nodoMensaje.value = 'Correcto! Presiona CONTINUAR'
         nodoPuntaje = puntaje + 1
+    } else {
+        nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
     }
 }
 
@@ -170,4 +172,3 @@ $form.azul.onclick = function () {
 $form.amarillo.onclick = function () {
     return ordenJugador.push(4)
 }
-
