@@ -45,6 +45,10 @@ $form.reiniciar.onclick = function () {
     reiniciarJuego()
 }
 
+$form.continuar.onclick = function () {
+    pruebaIteracionDeRandoms()
+}
+
 /* FUNCIONES */
 
 function mostrarMensajeSuerte() {
@@ -67,9 +71,20 @@ function mostrarMensajeSuerte() {
 function reiniciarJuego() {
     let nodoMensaje = $form.mensaje
     let nodoPuntaje = $form.puntaje
-    nodoMensaje.className = ('mensajeLose')
+    nodoMensaje.className = ('')
     nodoMensaje.value = 'Juego reiniciado'
     nodoPuntaje.value = 0
+}
+
+function pruebaIteracionDeRandoms() {
+    let nodoMensaje = $form.mensaje
+    nodoMensaje.value = iteracionDeRandoms()
+
+    function iteracionDeRandoms() {
+        for (let i = "#"; i.length < 8; i += "#") {
+            return i
+        }
+    }
 }
 
 function mostrarMensajeTurnoPc() {
