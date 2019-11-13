@@ -90,6 +90,10 @@ body {
   grid-area: sector2;
 }
 
+#rojo{
+width: 15vw;
+}
+
 .rojo {
   grid-area: rojo;
 }
@@ -251,6 +255,7 @@ input:focus {
 }
 
 #puntaje {
+  padding-bottom: 10px;
   text-align: left;
   border: none;
   width: 150px;
@@ -258,7 +263,8 @@ input:focus {
 }
 
 #pmaximo {
-  text-align: left;
+    padding-bottom: 10px;
+  text-align: right;
   border: none;
   width: 150px;
   background: white;

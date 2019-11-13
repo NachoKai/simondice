@@ -9,34 +9,25 @@ ERR        >> si se presiona el mismo color:
 ERR            >> Mensaje: Correcto! Haz click en CONTINUAR
 ERR            >> Puntaje aumenta +1
             >> Puntaje Maximo aumenta +1 si el numero es menor a Puntaje
-            >> al clickear CONTINUAR se activa la funcion random pero ahora elije dos numeros (colores)
+            >> se activa la funcion random pero ahora elije dos numeros (colores)
             >> se ilumina un color con un cambio de clase (timer), se ilumina el otro
         >> si se presiona otro color:
             >> mensaje: Incorrecto! Vuelve a empezar
             >> se resetea Puntaje
             >> Puntaje Maximo guarda el numero mas alto de Puntaje, y si es mas alto le cambia el valor y lo guarda
 
-*REINICIAR borra el Puntaje y comienza a correr el programa de nuevo, no borra Puntaje Maximo. */
-
 ////////////////////////////////////////
 
 /* VARIABLES */
 const $form = document.querySelector("#form")
-
 let puntaje = $form.querySelector("#puntaje")
 let start = $form.querySelector("#start")
 let pmaximo = $form.querySelector("#pmaximo")
-
 let rojo = $form.querySelector("#rojo")
 let verde = $form.querySelector("#verde")
 let azul = $form.querySelector("#azul")
 let amarillo = $form.querySelector("#amarillo")
-
-let reiniciar = $form.querySelector("#reiniciar")
-let continuar = $form.querySelector("#continuar")
-
 let mensaje = $form.querySelector("#mensaje")
-
 let orden = []
 let ordenJugador = []
 
@@ -44,14 +35,6 @@ let ordenJugador = []
 
 $form.start.onclick = function () {
     mostrarMensajeSuerte()
-}
-
-$form.reiniciar.onclick = function () {
-    reiniciarJuego()
-}
-
-$form.continuar.onclick = function () {
-    eligeRandom()
 }
 
 /* FUNCIONES */
@@ -71,15 +54,6 @@ function mostrarMensajeSuerte() {
     setTimeout(function () {
         mostrarMensajeTuTurno()
     }, 2300)
-    turnoJugador()
-}
-
-function reiniciarJuego() {
-    let nodoMensaje = $form.mensaje
-    let nodoPuntaje = $form.puntaje
-    nodoMensaje.className = ('')
-    nodoMensaje.value = 'Juego reiniciado'
-    nodoPuntaje.value = 0
 }
 
 function mostrarMensajeTurnoPc() {
@@ -87,6 +61,7 @@ function mostrarMensajeTurnoPc() {
     setTimeout(function () {
         nodoMensaje.value = 'Es el turno de la computadora...'
     }, 1500)
+    turnoJugador()
 }
 
 function eligeRandom() {
@@ -150,8 +125,9 @@ function mostrarMensajeTuTurno() {
 }
 
 function turnoJugador() {
-    if (ordenJugador[ordenJugador.length - 1] == orden[orden.length - 1]) {
-        nodoMensaje.value = 'Correcto! Presiona CONTINUAR'
+    let nodoMensaje = $form.mensaje
+    if (ordenJugador[ordenJugador.length - 1] === orden[orden.length - 1]) {
+        nodoMensaje.value = 'Correcto!'
         nodoPuntaje = puntaje + 1
     } else {
         nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
