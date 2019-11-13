@@ -197,6 +197,7 @@ footer {
 
 .link:active {
   font-size: 14px;
+  outline: 0;
 }
 
 /* botones */
@@ -208,6 +209,7 @@ footer {
 
 #start:active {
   height: 44px;
+  outline: 0;
 }
 
 .button:focus {
@@ -246,6 +248,7 @@ input:focus {
 
 .button:active {
   height: 36px;
+  outline: 0;
 }
 
 .button:hover {
@@ -297,12 +300,12 @@ input:focus {
   background: #d31721;
   height: 96%;
   width: 96%;
+  outline: 0;
 }
 
 .boton-rojo:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
 }
-
 /* boton verde */
 .boton-verde {
   height: 100%;
@@ -319,6 +322,7 @@ input:focus {
   background: #1ca144;
   height: 96%;
   width: 96%;
+  outline: 0;
 }
 
 .boton-verde:hover {
@@ -341,6 +345,7 @@ input:focus {
   background: #0094d3;
   height: 96%;
   width: 96%;
+  outline: 0;
 }
 
 .boton-azul:hover {
@@ -363,6 +368,7 @@ input:focus {
   background: #e6da00;
   height: 96%;
   width: 96%;
+  outline: 0;
 }
 
 .boton-amarillo:hover {
