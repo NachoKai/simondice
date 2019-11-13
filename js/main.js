@@ -30,21 +30,22 @@ let amarillo = $form.querySelector("#amarillo")
 let mensaje = $form.querySelector("#mensaje")
 let orden = []
 let ordenJugador = []
+let puntaje0 = 0
+let pmaximo0 = 0
 
 /* MAIN */
 
 $form.start.onclick = function () {
-    mostrarMensajeSuerte()
+    startGame()
 }
 
 /* FUNCIONES */
 
-function mostrarMensajeSuerte() {
-    let nodoMensaje = $form.mensaje
+function startGame() {
     let nodoPuntaje = $form.puntaje
-    nodoMensaje.className = ('')
-    nodoMensaje.value = 'Suerte!'
     nodoPuntaje.value = 0
+
+    mostrarMensajeSuerte()
     setTimeout(function () {
         mostrarMensajeTurnoPc()
     }, 500)
@@ -56,12 +57,17 @@ function mostrarMensajeSuerte() {
     }, 2300)
 }
 
+function mostrarMensajeSuerte() {
+    let nodoMensaje = $form.mensaje
+    nodoMensaje.className = ('')
+    nodoMensaje.value = 'Suerte!'
+}
+
 function mostrarMensajeTurnoPc() {
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
         nodoMensaje.value = 'Es el turno de la computadora...'
     }, 1500)
-    turnoJugador()
 }
 
 function eligeRandom() {

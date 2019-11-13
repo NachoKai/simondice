@@ -90,8 +90,20 @@ body {
   grid-area: sector2;
 }
 
-#rojo{
-width: 15vw;
+#rojo {
+  width: 15vw;
+}
+
+#verde {
+  width: 15vw;
+}
+
+#azul {
+  width: 15vw;
+}
+
+#amarillo {
+  width: 15vw;
 }
 
 .rojo {
@@ -263,7 +275,7 @@ input:focus {
 }
 
 #pmaximo {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
   text-align: right;
   border: none;
   width: 150px;
