@@ -270,6 +270,7 @@ input:focus {
 }
 
 #puntaje {
+  font-size: 25px;
   padding-bottom: 10px;
   text-align: left;
   border: none;
@@ -278,6 +279,7 @@ input:focus {
 }
 
 #pmaximo {
+  font-size: 25px;
   padding-bottom: 10px;
   text-align: right;
   border: none;
