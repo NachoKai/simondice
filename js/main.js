@@ -32,6 +32,7 @@ let orden = []
 let ordenJugador = []
 let puntaje0 = 0
 let pmaximo0 = 0
+let turnoDelJugador = false
 
 /* MAIN */
 
@@ -42,16 +43,14 @@ $form.start.onclick = function () {
 /* FUNCIONES */
 
 function startGame() {
+    let puntaje0 = 0
     let nodoPuntaje = $form.puntaje
-    nodoPuntaje.value = 0
+    nodoPuntaje.value = puntaje0
 
     mostrarMensajeSuerte()
     setTimeout(function () {
         mostrarMensajeTurnoPc()
     }, 500)
-    setTimeout(function () {
-        eligeRandom()
-    }, 800)
     setTimeout(function () {
         mostrarMensajeTuTurno()
     }, 2300)
@@ -64,6 +63,9 @@ function mostrarMensajeSuerte() {
 }
 
 function mostrarMensajeTurnoPc() {
+    setTimeout(function () {
+        eligeRandom()
+    }, 800)
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
         nodoMensaje.value = 'Es el turno de la computadora...'
@@ -140,15 +142,22 @@ function turnoJugador() {
     }
 }
 
-$form.rojo.onclick = function () {
-    return ordenJugador.push(1)
+$form.rojo.onclick = function (event) {
+    ordenJugador.push(1)
+    event.preventDefault()
 }
-$form.verde.onclick = function () {
-    return ordenJugador.push(2)
+
+$form.verde.onclick = function (event) {
+    ordenJugador.push(2)
+    event.preventDefault()
 }
-$form.azul.onclick = function () {
-    return ordenJugador.push(3)
+
+$form.azul.onclick = function (event) {
+    ordenJugador.push(3)
+    event.preventDefault()
 }
-$form.amarillo.onclick = function () {
-    return ordenJugador.push(4)
+
+$form.amarillo.onclick = function (event) {
+    ordenJugador.push(4)
+    event.preventDefault()
 }
