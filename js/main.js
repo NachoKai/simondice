@@ -184,7 +184,7 @@ function turnoJugador() {
         mostrarMensajeTurnoPc()
     } else {
         nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
-
+        let turnoDelJugador = false
         if (puntaje > pmaximo) {
             nodoPMaximo.value = puntaje
         }
