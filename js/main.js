@@ -5,20 +5,22 @@ YA    >> Mensaje muestra: Es el turno de la computadora...
 YA    >> una funcion elige un random entre 1 y 4 (asignarle un numero a cada color?) y elige uno de los colores
 YA    >> se ilumina el color con un cambio de clase >> (timer para cuando tenga que elegir el siguiente color)
 YA    >> Mensaje muestra: Es tu turno...
-ERR        >> si se presiona el mismo color: 
-ERR            >> Mensaje: Correcto! Haz click en CONTINUAR
+YA        >> si se presiona el mismo color: 
+ERR            >> Mensaje: Correcto! 
 ERR            >> Puntaje aumenta +1
             >> Puntaje Maximo aumenta +1 si el numero es menor a Puntaje
-            >> se activa la funcion random pero ahora elije dos numeros (colores)
+            >> Es el turno de la computadora
+            >> se activa la funcion random pero ahora elije dos numeros respetando orden del array
             >> se ilumina un color con un cambio de clase (timer), se ilumina el otro
+            >> Es tu turno
         >> si se presiona otro color:
             >> mensaje: Incorrecto! Vuelve a empezar
             >> se resetea Puntaje
             >> Puntaje Maximo guarda el numero mas alto de Puntaje, y si es mas alto le cambia el valor y lo guarda
 
-////////////////////////////////////////
+*Desactivar botones a menos que sea el momento de tocarlos (turno usuario)
+////////////////////////////////////////*/
 
-/* VARIABLES */
 const $form = document.querySelector("#form")
 let puntaje = $form.querySelector("#puntaje")
 let start = $form.querySelector("#start")
@@ -30,30 +32,21 @@ let amarillo = $form.querySelector("#amarillo")
 let mensaje = $form.querySelector("#mensaje")
 let orden = []
 let ordenJugador = []
-let puntaje0 = 0
-let pmaximo0 = 0
+let turno = document.querySelector("#turno")
 let turnoDelJugador = false
-
-/* MAIN */
 
 $form.start.onclick = function () {
     startGame()
 }
 
-/* FUNCIONES */
-
 function startGame() {
-    let puntaje0 = 0
     let nodoPuntaje = $form.puntaje
-    nodoPuntaje.value = puntaje0
+    nodoPuntaje.value = 0
 
     mostrarMensajeSuerte()
     setTimeout(function () {
         mostrarMensajeTurnoPc()
     }, 500)
-    setTimeout(function () {
-        mostrarMensajeTuTurno()
-    }, 2300)
 }
 
 function mostrarMensajeSuerte() {
@@ -63,25 +56,27 @@ function mostrarMensajeSuerte() {
 }
 
 function mostrarMensajeTurnoPc() {
+    let turnoDelJugador = false
     setTimeout(function () {
         eligeRandom()
     }, 800)
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
         nodoMensaje.value = 'Es el turno de la computadora...'
-    }, 1500)
+    }, 1000)
 }
 
 function eligeRandom() {
-    let nodoRojo = $form.rojo
-    let nodoVerde = $form.verde
-    let nodoAzul = $form.azul
-    let nodoAmarillo = $form.amarillo
+    let nodoRojo = $form.querySelector("#rojo")
+    let nodoVerde = $form.querySelector("#verde")
+    let nodoAzul = $form.querySelector("#azul")
+    let nodoAmarillo = $form.querySelector("#amarillo")
     let eligeRojo = 1
     let eligeVerde = 2
     let eligeAzul = 3
     let eligeAmarillo = 4
     let numeroRandom = iteracionDeRandoms()
+    let turnoDelJugador = false
 
     function iteracionDeRandoms() {
         for (let i = 0; i < 25; i++) {
@@ -122,6 +117,10 @@ function eligeRandom() {
             nodoAmarillo.className = ('boton-amarillo')
         }, 2500)
     }
+
+    setTimeout(function () {
+        mostrarMensajeTuTurno()
+    }, 2300)
 }
 
 function mostrarMensajeTuTurno() {
@@ -129,35 +128,58 @@ function mostrarMensajeTuTurno() {
     setTimeout(function () {
         nodoMensaje.className = ('')
         nodoMensaje.value = 'Es tu turno!'
-    }, 1500)
+    }, 500)
+    let turnoJugador = true
+}
+
+$form.querySelector("#rojo").onclick = function (event) {
+    if (turnoDelJugador = true) {
+        ordenJugador.push(1)
+    } else {
+        return ''
+    }
+    turnoJugador()
+    event.preventDefault()
+}
+
+$form.querySelector("#verde").onclick = function (event) {
+    if (turnoDelJugador = true) {
+        ordenJugador.push(2)
+    } else {
+        return ''
+    }
+    turnoJugador()
+    event.preventDefault()
+}
+
+$form.querySelector("#azul").onclick = function (event) {
+    if (turnoDelJugador = true) {
+        ordenJugador.push(3)
+    } else {
+        return ''
+    }
+    turnoJugador()
+    event.preventDefault()
+}
+
+$form.querySelector("#amarillo").onclick = function (event) {
+    if (turnoDelJugador = true) {
+        ordenJugador.push(4)
+    } else {
+        return ''
+    }
+    turnoJugador()
+    event.preventDefault()
 }
 
 function turnoJugador() {
+    let nodoPuntaje = $form.puntaje
     let nodoMensaje = $form.mensaje
     if (ordenJugador[ordenJugador.length - 1] === orden[orden.length - 1]) {
         nodoMensaje.value = 'Correcto!'
-        nodoPuntaje = puntaje + 1
+        nodoPuntaje.value = puntaje + 1
+        mostrarMensajeTurnoPc()
     } else {
         nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
     }
-}
-
-$form.rojo.onclick = function (event) {
-    ordenJugador.push(1)
-    event.preventDefault()
-}
-
-$form.verde.onclick = function (event) {
-    ordenJugador.push(2)
-    event.preventDefault()
-}
-
-$form.azul.onclick = function (event) {
-    ordenJugador.push(3)
-    event.preventDefault()
-}
-
-$form.amarillo.onclick = function (event) {
-    ordenJugador.push(4)
-    event.preventDefault()
 }

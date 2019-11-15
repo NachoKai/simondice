@@ -15,26 +15,28 @@
     <form class="grid-container" id="form">
         <div class="sector1">
             <div class="puntaje">Puntaje:
-                <input type="text" name="puntaje" id="puntaje" disabled>
-            </div>
-            <div class="start">
-                <input type="button" value="START" id="start" class="button">
+                <input type="text" name="puntaje" id="puntaje" value="0" disabled>
             </div>
             <div class="pmaximo">Puntaje Maximo:
-                <input type="text" name="pmaximo" id="pmaximo" disabled>
+                <input type="text" name="pmaximo" id="pmaximo" value="0" disabled>
+            </div>
+            <div class="turno"><label for="turno">Turno: </label><input type="number" value="0" disabled id="turno">
             </div>
         </div>
 
         <div class="colores">
             <div class="sector2">
-                <div class="rojo"><button class="boton-rojo" id="rojo"></div>
-                <div class="verde"><button class="boton-verde" id="verde"></div>
-                <div class="azul"><button class="boton-azul" id="azul"></div>
-                <div class="amarillo"><button class="boton-amarillo" id="amarillo"></div>
+                <div class="boton-rojo" id="rojo"></div>
+                <div class="boton-verde" id="verde"></div>
+                <div class="boton-azul" id="azul"></div>
+                <div class="boton-amarillo" id="amarillo"></div>
             </div>
         </div>
 
         <div class="sector4">
+            <div class="start">
+                <input type="button" value="START" id="start" class="button">
+            </div>
             <div class="mensaje">Mensaje:
                 <input type="text" name="mensaje" id="mensaje" disabled>
             </div>
