@@ -1,26 +1,3 @@
-/*
-YA *START para correr el programa
-YA    >> Mensaje muestra: Suerte! >> (timer)
-YA    >> Mensaje muestra: Es el turno de la computadora...
-YA    >> una funcion elige un random entre 1 y 4 (asignarle un numero a cada color?) y elige uno de los colores
-YA    >> se ilumina el color con un cambio de clase >> (timer para cuando tenga que elegir el siguiente color)
-YA    >> Mensaje muestra: Es tu turno...
-YA        >> si se presiona el mismo color: 
-ERR            >> Mensaje: Correcto! 
-ERR            >> Puntaje aumenta +1
-            >> Puntaje Maximo aumenta +1 si el numero es menor a Puntaje
-            >> Es el turno de la computadora
-            >> se activa la funcion random pero ahora elije dos numeros respetando orden del array
-            >> se ilumina un color con un cambio de clase (timer), se ilumina el otro
-            >> Es tu turno
-        >> si se presiona otro color:
-            >> mensaje: Incorrecto! Vuelve a empezar
-            >> se resetea Puntaje
-            >> Puntaje Maximo guarda el numero mas alto de Puntaje, y si es mas alto le cambia el valor y lo guarda
-
-*Desactivar botones a menos que sea el momento de tocarlos (turno usuario)
-////////////////////////////////////////*/
-
 const $form = document.querySelector("#form")
 let puntaje = $form.querySelector("#puntaje")
 let start = $form.querySelector("#start")
@@ -32,7 +9,6 @@ let amarillo = $form.querySelector("#amarillo")
 let mensaje = $form.querySelector("#mensaje")
 let orden = []
 let ordenJugador = []
-let turno = document.querySelector("#turno")
 let turnoDelJugador = false
 
 $form.start.onclick = function () {
