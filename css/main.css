@@ -16,11 +16,9 @@ body {
 
 .grid-container {
   justify-content: center;
-  padding: 10px;
   display: flex;
-  height: 90vh;
+  height: 95vh;
   width: 99vw;
-  ;
   align-items: center;
   justify-content: space-around;
   color: white;
@@ -180,7 +178,7 @@ body {
 }
 
 footer {
-  height: 40px;
+  height: 30px;
   font-size: 15px;
 }
 
