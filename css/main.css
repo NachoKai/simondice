@@ -146,6 +146,9 @@ body {
 }
 
 .sector4 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   background-color: #ffffff;
   padding: 2rem 3rem;
@@ -254,7 +257,7 @@ input:focus {
 /* inputs */
 
 #mensaje {
-  width: 100%;
+  width: 280px;
   border: none;
   font-size: 20px;
   color: #000000;
