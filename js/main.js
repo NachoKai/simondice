@@ -174,6 +174,7 @@ $form.querySelector("#amarillo").onclick = function (event) {
 
 function turnoJugador() {
     let nodoPuntaje = $form.puntaje
+    let puntaje = Number(nodoPuntaje.value)
     let nodoMensaje = $form.mensaje
     if (ordenJugador[ordenJugador.length - 1] === orden[orden.length - 1]) {
         nodoMensaje.value = 'Correcto!'
