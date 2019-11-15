@@ -80,7 +80,6 @@ body {
   background-color: #ffffff;
   padding: 2rem 3rem;
   display: grid;
-  width: 100%;
   padding: 5px;
   margin: 5px;
   height: 100%;
@@ -91,19 +90,19 @@ body {
 }
 
 #rojo {
-  width: 30vw;
+  width: 15vw;
 }
 
 #verde {
-  width: 30vw;
+  width: 15vw;
 }
 
 #azul {
-  width: 30vw;
+  width: 15vw;
 }
 
 #amarillo {
-  width: 30vw;
+  width: 15vw;
 }
 
 .rojo {
@@ -150,9 +149,6 @@ body {
   justify-content: center;
   background-color: #ffffff;
   padding: 2rem 3rem;
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
   color: #000000;
   padding: 5px;
   margin: 5px;
@@ -164,7 +160,6 @@ body {
 
 .mensaje {
   font-weight: bold;
-  width: 100%;
   color: #000000;
   font-size: 20px;
   grid-area: mensaje;
@@ -308,6 +303,7 @@ input:focus {
 .boton-rojo:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
 }
+
 /* boton verde */
 .boton-verde {
   height: 100%;
@@ -438,4 +434,77 @@ input:focus {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+
+  #rojo {
+    width: 80vw;
+  }
+
+  #verde {
+    width: 80vw;
+  }
+
+  #azul {
+    width: 80vw;
+  }
+
+  #amarillo {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #rojo {
+    width: 40vw;
+  }
+
+  #verde {
+    width: 40vw;
+  }
+
+  #azul {
+    width: 40vw;
+  }
+
+  #amarillo {
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  #rojo {
+    width: 30vw;
+  }
+
+  #verde {
+    width: 30vw;
+  }
+
+  #azul {
+    width: 30vw;
+  }
+
+  #amarillo {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  #rojo {
+    width: 25vw;
+  }
+
+  #verde {
+    width: 25vw;
+  }
+
+  #azul {
+    width: 25vw;
+  }
+
+  #amarillo {
+    width: 25vw;
+  }
 }
