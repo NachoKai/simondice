@@ -173,8 +173,10 @@ $form.querySelector("#amarillo").onclick = function (event) {
 }
 
 function turnoJugador() {
+    let nodoPMaximo = $form.pmaximo
     let nodoPuntaje = $form.puntaje
     let puntaje = Number(nodoPuntaje.value)
+    let pmaximo = Number(nodoPMaximo.value)
     let nodoMensaje = $form.mensaje
     if (ordenJugador[ordenJugador.length - 1] === orden[orden.length - 1]) {
         nodoMensaje.value = 'Correcto!'
@@ -182,5 +184,9 @@ function turnoJugador() {
         mostrarMensajeTurnoPc()
     } else {
         nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
+
+        if (puntaje > pmaximo) {
+            nodoPMaximo.value = puntaje
+        }
     }
 }

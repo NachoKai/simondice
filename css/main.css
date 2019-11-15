@@ -281,7 +281,7 @@ input:focus {
 #pmaximo {
   font-size: 25px;
   padding-bottom: 10px;
-  text-align: right;
+  text-align: left;
   border: none;
   width: 150px;
   background: white;
