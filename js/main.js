@@ -27,7 +27,7 @@ function mostrarMensajeSuerte() {
     nodoMensaje.value = 'Suerte!'
 }
 
-function mostrarMensajeTurnoPc() {
+function turnoPc() {
     noPermiteClickear()
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
@@ -120,7 +120,7 @@ function turnoJugador() {
         nodoMensaje.value = 'Correcto!'
         nodoPuntaje.value = puntaje + 1
         asignarPuntajeMaximo()
-        mostrarMensajeTurnoPc()
+        turnoPc()
     } else {
         nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
         if (turnoUser === true) {
@@ -133,7 +133,7 @@ function turnoJugador() {
 $form.start.onclick = function () {
     puntaje.value = 0
     mostrarMensajeSuerte()
-    mostrarMensajeTurnoPc()
+    turnoPc()
 }
 
 $form.querySelector("#rojo").onclick = function (event) {
