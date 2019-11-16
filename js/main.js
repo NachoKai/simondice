@@ -11,12 +11,24 @@ let secuenciaPc = []
 let secuenciaUser = []
 let turnoUser = false
 
+function permiteClickear(){
+    if (turnoUser === false) {
+        return turnoUser = true
+    }
+}
+function noPermiteClickear(){
+    if (turnoUser === true) {
+        return turnoUser = false
+    }
+}
+
 function mostrarMensajeSuerte() {
     let nodoMensaje = $form.mensaje
     nodoMensaje.value = 'Suerte!'
 }
 
 function mostrarMensajeTurnoPc() {
+    noPermiteClickear()
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
         nodoMensaje.value = 'Es el turno de la computadora...'
@@ -83,16 +95,14 @@ function iteracionDeRandoms() {
 }
 
 function mostrarMensajeTurnoUser() {
+    permiteClickear()
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
         nodoMensaje.value = 'Es tu turno!'
     }, 500)
-    if (turnoUser === false) {
-        return turnoUser = true
-    }
 }
 
-function asignarPuntajeMaximo(){
+function asignarPuntajeMaximo() {
     let nodoPMaximo = $form.pmaximo
     let nodoPuntaje = $form.puntaje
     let puntaje = Number(nodoPuntaje.value)
@@ -103,10 +113,8 @@ function asignarPuntajeMaximo(){
 }
 
 function turnoJugador() {
-    let nodoPMaximo = $form.pmaximo
     let nodoPuntaje = $form.puntaje
     let puntaje = Number(nodoPuntaje.value)
-    let pmaximo = Number(nodoPMaximo.value)
     let nodoMensaje = $form.mensaje
     if (secuenciaUser[secuenciaUser.length - 1] === secuenciaPc[secuenciaPc.length - 1]) {
         nodoMensaje.value = 'Correcto!'
@@ -122,8 +130,6 @@ function turnoJugador() {
     }
 }
 
-
-
 $form.start.onclick = function () {
     puntaje.value = 0
     mostrarMensajeSuerte()
@@ -133,39 +139,40 @@ $form.start.onclick = function () {
 $form.querySelector("#rojo").onclick = function (event) {
     if (turnoUser === true) {
         secuenciaUser.push(1)
+        turnoJugador()
+        event.preventDefault()
     } else {
         return ''
     }
-    turnoJugador()
-    event.preventDefault()
+
 }
 
 $form.querySelector("#verde").onclick = function (event) {
     if (turnoUser === true) {
         secuenciaUser.push(2)
+        turnoJugador()
+        event.preventDefault()
     } else {
         return ''
     }
-    turnoJugador()
-    event.preventDefault()
 }
 
 $form.querySelector("#azul").onclick = function (event) {
     if (turnoUser === true) {
         secuenciaUser.push(3)
+        turnoJugador()
+        event.preventDefault()
     } else {
         return ''
     }
-    turnoJugador()
-    event.preventDefault()
 }
 
 $form.querySelector("#amarillo").onclick = function (event) {
     if (turnoUser === true) {
         secuenciaUser.push(4)
+        turnoJugador()
+        event.preventDefault()
     } else {
         return ''
     }
-    turnoJugador()
-    event.preventDefault()
 }
