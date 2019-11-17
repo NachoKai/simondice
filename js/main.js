@@ -47,53 +47,51 @@ function eligeRandom() {
     let eligeRojo = 1
     let eligeVerde = 2
     let eligeAzul = 3
+    let eligeAmarillo = 4
     let numerosRandoms = iteracionDeRandoms()
 
-    for (let i = 0; i < numerosRandoms.length; i++) {
-
+    if (numerosRandoms[i] === eligeRojo) {
         setTimeout(function () {
-
-            if (numerosRandoms[i] === eligeRojo) {
-                setTimeout(function () {
-                    nodoRojo.className = ('rojoActivado')
-                }, 1000)
-                setTimeout(function () {
-                    nodoRojo.className = ('boton-rojo')
-                }, 1500)
-            }
-
-            if (numerosRandoms[i] === eligeVerde) {
-                setTimeout(function () {
-                    nodoVerde.className = ('verdeActivado')
-                }, 1000)
-                setTimeout(function () {
-                    nodoVerde.className = ('boton-verde')
-                }, 1500)
-            }
-
-            if (numerosRandoms[i] === eligeAzul) {
-                setTimeout(function () {
-                    nodoAzul.className = ('azulActivado')
-                }, 1000)
-                setTimeout(function () {
-                    nodoAzul.className = ('boton-azul')
-                }, 1500)
-            }
-
-            if (numerosRandoms[i] === eligeAmarillo) {
-                setTimeout(function () {
-                    nodoAmarillo.className = ('amarilloActivado')
-                }, 1000)
-                setTimeout(function () {
-                    nodoAmarillo.className = ('boton-amarillo')
-                }, 1500)
-            }
-
-        }, (i + 1) * 1000)
-
+            nodoRojo.className = ('rojoActivado')
+        }, 1000)
         setTimeout(function () {
-            mostrarMensajeTurnoUser()
-        }, 1500)
+            nodoRojo.className = ('boton-rojo')
+        }, 2000)
+    }
+    if (numerosRandoms[i] === eligeVerde) {
+        setTimeout(function () {
+            nodoVerde.className = ('verdeActivado')
+        }, 1000)
+        setTimeout(function () {
+            nodoVerde.className = ('boton-verde')
+        }, 2000)
+    }
+    if (numerosRandoms[i] === eligeAzul) {
+        setTimeout(function () {
+            nodoAzul.className = ('azulActivado')
+        }, 1000)
+        setTimeout(function () {
+            nodoAzul.className = ('boton-azul')
+        }, 2000)
+    }
+    if (numerosRandoms[i] === eligeAmarillo) {
+        setTimeout(function () {
+            nodoAmarillo.className = ('amarilloActivado')
+        }, 1000)
+        setTimeout(function () {
+            nodoAmarillo.className = ('boton-amarillo')
+        }, 2000)
+    }​
+    
+    setTimeout(function () {
+        mostrarMensajeTurnoUser()
+    }, 2000)
+}
+
+function iteracionDeRandoms() {
+    for (let i = 0; i < 25; i++) {
+        secuenciaPc.push(Math.floor(Math.random() * 4) + 1);
+        return (secuenciaPc)
     }
 }
 
@@ -101,7 +99,7 @@ function iteracionDeRandoms() {
     for (let i = 0; i < 25; i++) {
         secuenciaPc.push(Math.floor(Math.random() * 4) + 1)
     }
-    return (secuenciaPc)
+    return secuenciaPc
 }
 
 function mostrarMensajeTurnoUser() {
