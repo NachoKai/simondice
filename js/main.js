@@ -49,6 +49,7 @@ function eligeRandom() {
     let eligeAzul = 3
     let eligeAmarillo = 4
     let numerosRandoms = iteracionDeRandoms()
+
     for(let i = 0; i<numerosRandoms.length;i++){
     let j = i+1;
     let tiempo = (j*1000)
@@ -136,7 +137,8 @@ function turnoJugador() {
 
 $form.start.onclick = function () {
     puntaje.value = 0
-    secuenciaPc = [];
+    secuenciaPc.value = []
+    secuenciaUser.value = []
     mostrarMensajeSuerte()
     turnoPc()
 }
