@@ -91,7 +91,7 @@ function eligeRandom() {
 
     setTimeout(function () {
         mostrarMensajeTurnoUser()
-    }, 2000)
+    }, 1500)
 }
 
 function iteracionDeRandoms() {
