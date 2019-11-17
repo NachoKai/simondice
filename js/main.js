@@ -53,39 +53,31 @@ function eligeRandom() {
     for (let i = 0; i < numerosRandoms.length; i++) {
 
         if (numerosRandoms[i] === eligeRojo) {
-            setTimeout(function () {
-                nodoRojo.className = ('rojoActivado')
-            }, 1000)
+            nodoRojo.className = ('rojoActivado')
             setTimeout(function () {
                 nodoRojo.className = ('boton-rojo')
-            }, 2000)
+            }, 500)
         }
 
         if (numerosRandoms[i] === eligeVerde) {
-            setTimeout(function () {
-                nodoVerde.className = ('verdeActivado')
-            }, 1000)
+            nodoVerde.className = ('verdeActivado')
             setTimeout(function () {
                 nodoVerde.className = ('boton-verde')
-            }, 2000)
+            }, 500)
         }
 
         if (numerosRandoms[i] === eligeAzul) {
-            setTimeout(function () {
-                nodoAzul.className = ('azulActivado')
-            }, 1000)
+            nodoAzul.className = ('azulActivado')
             setTimeout(function () {
                 nodoAzul.className = ('boton-azul')
-            }, 2000)
+            }, 500)
         }
 
         if (numerosRandoms[i] === eligeAmarillo) {
-            setTimeout(function () {
-                nodoAmarillo.className = ('amarilloActivado')
-            }, 1000)
+            nodoAmarillo.className = ('amarilloActivado')
             setTimeout(function () {
                 nodoAmarillo.className = ('boton-amarillo')
-            }, 2000)
+            }, 500)
         }
     }
 
