@@ -50,42 +50,52 @@ function eligeRandom() {
     let eligeAmarillo = 4
     let numerosRandoms = iteracionDeRandoms()
 
-    if (numerosRandoms[i] === eligeRojo) {
+    for (let i = 0; i < numerosRandoms.length; i++) {
+
         setTimeout(function () {
-            nodoRojo.className = ('rojoActivado')
-        }, 1000)
+
+            if (numerosRandoms[i] === eligeRojo) {
+                setTimeout(function () {
+                    nodoRojo.className = ('rojoActivado')
+                }, 1000)
+                setTimeout(function () {
+                    nodoRojo.className = ('boton-rojo')
+                }, 1500)
+            }
+
+            if (numerosRandoms[i] === eligeVerde) {
+                setTimeout(function () {
+                    nodoVerde.className = ('verdeActivado')
+                }, 1000)
+                setTimeout(function () {
+                    nodoVerde.className = ('boton-verde')
+                }, 1500)
+            }
+
+            if (numerosRandoms[i] === eligeAzul) {
+                setTimeout(function () {
+                    nodoAzul.className = ('azulActivado')
+                }, 1000)
+                setTimeout(function () {
+                    nodoAzul.className = ('boton-azul')
+                }, 1500)
+            }
+
+            if (numerosRandoms[i] === eligeAmarillo) {
+                setTimeout(function () {
+                    nodoAmarillo.className = ('amarilloActivado')
+                }, 1000)
+                setTimeout(function () {
+                    nodoAmarillo.className = ('boton-amarillo')
+                }, 1500)
+            }
+
+        }, (i + 1) * 1000)
+
         setTimeout(function () {
-            nodoRojo.className = ('boton-rojo')
-        }, 2000)
+            mostrarMensajeTurnoUser()
+        }, 1500)
     }
-    if (numerosRandoms[i] === eligeVerde) {
-        setTimeout(function () {
-            nodoVerde.className = ('verdeActivado')
-        }, 1000)
-        setTimeout(function () {
-            nodoVerde.className = ('boton-verde')
-        }, 2000)
-    }
-    if (numerosRandoms[i] === eligeAzul) {
-        setTimeout(function () {
-            nodoAzul.className = ('azulActivado')
-        }, 1000)
-        setTimeout(function () {
-            nodoAzul.className = ('boton-azul')
-        }, 2000)
-    }
-    if (numerosRandoms[i] === eligeAmarillo) {
-        setTimeout(function () {
-            nodoAmarillo.className = ('amarilloActivado')
-        }, 1000)
-        setTimeout(function () {
-            nodoAmarillo.className = ('boton-amarillo')
-        }, 2000)
-    }​
-    
-    setTimeout(function () {
-        mostrarMensajeTurnoUser()
-    }, 2000)
 }
 
 function iteracionDeRandoms() {
