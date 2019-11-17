@@ -123,6 +123,7 @@ function asignarPuntajeMaximo() {
 }
 
 function turnoJugador(num) {
+    permiteClickear()
     let nodoPuntaje = $form.puntaje
     let puntaje = Number(nodoPuntaje.value)
     let nodoMensaje = $form.mensaje
@@ -153,6 +154,7 @@ $form.start.onclick = function () {
     turnos = 0
     mostrarMensajeSuerte()
     turnoPc()
+    noPermiteClickear()
 }
 
 $form.querySelector("#rojo").onclick = function (event) {
