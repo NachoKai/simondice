@@ -100,13 +100,6 @@ function eligeRandom() {
 
 function iteracionDeRandoms() {
     for (let i = 0; i < 25; i++) {
-        secuenciaPc.push(Math.floor(Math.random() * 4) + 1);
-        return (secuenciaPc)
-    }
-}
-
-function iteracionDeRandoms() {
-    for (let i = 0; i < 25; i++) {
         secuenciaPc.push(Math.floor(Math.random() * 4) + 1)
     }
     return secuenciaPc
