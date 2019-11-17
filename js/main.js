@@ -49,7 +49,7 @@ function eligeRandom() {
     let eligeAzul = 3
     let eligeAmarillo = 4
     let numerosRandoms = iteracionDeRandoms()
-    
+
     for (let i = 0; i < numerosRandoms.length; i++) {
 
         if (numerosRandoms[i] === eligeRojo) {
