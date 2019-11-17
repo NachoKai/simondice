@@ -137,8 +137,8 @@ function turnoJugador() {
 
 $form.start.onclick = function () {
     puntaje.value = 0
-    secuenciaPc.value = []
-    secuenciaUser.value = []
+    secuenciaPc = []
+    secuenciaUser = []
     mostrarMensajeSuerte()
     turnoPc()
 }
