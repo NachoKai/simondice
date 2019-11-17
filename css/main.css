@@ -47,9 +47,13 @@ body {
 }
 
 .puntaje {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   font-weight: bold;
   grid-area: puntaje;
+  justify-content: center;
+  align-items: center;
 }
 
 .start {
