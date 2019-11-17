@@ -34,6 +34,7 @@ function turnoPc() {
     setTimeout(function () {
         nodoMensaje.value = 'Es el turno de la computadora...'
     }, 1000)
+    
     setTimeout(function () {
         eligeRandom()
     }, 800)
@@ -160,7 +161,6 @@ $form.querySelector("#rojo").onclick = function (event) {
     } else {
         return ''
     }
-
 }
 
 $form.querySelector("#verde").onclick = function (event) {
