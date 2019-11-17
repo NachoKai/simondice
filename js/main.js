@@ -34,10 +34,9 @@ function turnoPc() {
     setTimeout(function () {
         nodoMensaje.value = 'Es el turno de la computadora...'
     }, 1000)
-    
     setTimeout(function () {
         eligeRandom()
-    }, 800)
+    }, 1000)
 }
 
 function eligeRandom() {
