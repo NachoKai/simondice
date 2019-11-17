@@ -11,13 +11,13 @@ let secuenciaPc = []
 let secuenciaUser = []
 let turnoUser = false
 
-function permiteClickear() {
+function permiteClickear(){
     if (turnoUser === false) {
         return turnoUser = true
     }
 }
 
-function noPermiteClickear() {
+function noPermiteClickear(){
     if (turnoUser === true) {
         return turnoUser = false
     }
@@ -49,60 +49,53 @@ function eligeRandom() {
     let eligeAzul = 3
     let eligeAmarillo = 4
     let numerosRandoms = iteracionDeRandoms()
-
-    for (let i = 0; i < numerosRandoms.length; i++) {
-
+    for(let i = 0; i<numerosRandoms.length;i++){
+    let j = i+1;
+    let tiempo = (j*1000)
+    if (numerosRandoms[i] === eligeRojo) {
         setTimeout(function () {
-
-            if (numerosRandoms[i] === eligeRojo) {
-                setTimeout(function () {
-                    nodoRojo.className = ('rojoActivado')
-                }, 1000)
-                setTimeout(function () {
-                    nodoRojo.className = ('boton-rojo')
-                }, 1500)
-            }
-
-            if (numerosRandoms[i] === eligeVerde) {
-                setTimeout(function () {
-                    nodoVerde.className = ('verdeActivado')
-                }, 1000)
-                setTimeout(function () {
-                    nodoVerde.className = ('boton-verde')
-                }, 1500)
-            }
-
-            if (numerosRandoms[i] === eligeAzul) {
-                setTimeout(function () {
-                    nodoAzul.className = ('azulActivado')
-                }, 1000)
-                setTimeout(function () {
-                    nodoAzul.className = ('boton-azul')
-                }, 1500)
-            }
-
-            if (numerosRandoms[i] === eligeAmarillo) {
-                setTimeout(function () {
-                    nodoAmarillo.className = ('amarilloActivado')
-                }, 1000)
-                setTimeout(function () {
-                    nodoAmarillo.className = ('boton-amarillo')
-                }, 1500)
-            }
-
-        }, (i + 1) * 1000)
-
+            nodoRojo.className = ('rojoActivado')
+        }, tiempo)
         setTimeout(function () {
-            mostrarMensajeTurnoUser()
-        }, 1500)
+            nodoRojo.className = ('boton-rojo')
+        }, tiempo+500)
     }
+    if (numerosRandoms[i] === eligeVerde) {
+        setTimeout(function () {
+            nodoVerde.className = ('verdeActivado')
+        }, tiempo)
+        setTimeout(function () {
+            nodoVerde.className = ('boton-verde')
+        }, tiempo+500)
+    }
+    if (numerosRandoms[i] === eligeAzul) {
+        setTimeout(function () {
+            nodoAzul.className = ('azulActivado')
+        }, tiempo)
+        setTimeout(function () {
+            nodoAzul.className = ('boton-azul')
+        }, tiempo+500)
+    }
+    if (numerosRandoms[i] === eligeAmarillo) {
+        setTimeout(function () {
+            nodoAmarillo.className = ('amarilloActivado')
+        }, tiempo)
+        setTimeout(function () {
+            nodoAmarillo.className = ('boton-amarillo')
+        }, tiempo+500)
+    }
+
+    setTimeout(function () {
+        mostrarMensajeTurnoUser()
+    }, tiempo+800)
+}
 }
 
 function iteracionDeRandoms() {
     for (let i = 0; i < 25; i++) {
-        secuenciaPc.push(Math.floor(Math.random() * 4) + 1)
+        secuenciaPc.push(Math.floor(Math.random() * 4) + 1);
+        return (secuenciaPc)
     }
-    return secuenciaPc
 }
 
 function mostrarMensajeTurnoUser() {
@@ -142,9 +135,8 @@ function turnoJugador() {
 }
 
 $form.start.onclick = function () {
-    secuenciaPc.value = []
-    secuenciaUser.value = []
     puntaje.value = 0
+    secuenciaPc = [];
     mostrarMensajeSuerte()
     turnoPc()
 }
@@ -157,6 +149,7 @@ $form.querySelector("#rojo").onclick = function (event) {
     } else {
         return ''
     }
+
 }
 
 $form.querySelector("#verde").onclick = function (event) {
