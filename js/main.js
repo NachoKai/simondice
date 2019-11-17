@@ -127,6 +127,7 @@ function turnoJugador(num) {
     let nodoPuntaje = $form.puntaje
     let puntaje = Number(nodoPuntaje.value)
     let nodoMensaje = $form.mensaje
+
     if (num == secuenciaPc[turnos]) {
         if (turnos === secuenciaPc.length - 1) {
             nodoMensaje.value = 'Correcto!'
@@ -138,10 +139,11 @@ function turnoJugador(num) {
             return ''
         }
     }
+
     if (num != secuenciaPc[turnos]) {
         nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
         asignarPuntajeMaximo()
-        turnoUser = false
+        noPermiteClickear()
         return ''
     }
 }
