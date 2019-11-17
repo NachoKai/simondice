@@ -88,6 +88,7 @@ function eligeRandom() {
             }, 2000)
         }
     }
+
     setTimeout(function () {
         mostrarMensajeTurnoUser()
     }, 2300)
@@ -96,7 +97,8 @@ function eligeRandom() {
 function iteracionDeRandoms() {
     for (let i = 0; i < 25; i++) {
         secuenciaPc.push(Math.floor(Math.random() * 4) + 1)
-    } return (secuenciaPc)
+    }
+    return (secuenciaPc)
 }
 
 function mostrarMensajeTurnoUser() {
