@@ -92,7 +92,7 @@ function eligeRandom() {
 
         setTimeout(function () {
             mostrarMensajeTurnoUser()
-        }, tiempo + 1000)
+        }, 1500)
         turnos = 0
     }
 }
