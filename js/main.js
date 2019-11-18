@@ -122,6 +122,30 @@ function asignarPuntajeMaximo() {
     }
 }
 
+function gameOver(){
+    let nodoRojo = $form.querySelector("#rojo")
+    let nodoVerde = $form.querySelector("#verde")
+    let nodoAzul = $form.querySelector("#azul")
+    let nodoAmarillo = $form.querySelector("#amarillo")
+
+    nodoRojo.className = ('rojoActivado')
+    nodoVerde.className = ('verdeActivado')
+    nodoAzul.className = ('azulActivado')
+    nodoAmarillo.className = ('amarilloActivado')
+}
+
+function gameStart(){
+    let nodoRojo = $form.querySelector("#rojo")
+    let nodoVerde = $form.querySelector("#verde")
+    let nodoAzul = $form.querySelector("#azul")
+    let nodoAmarillo = $form.querySelector("#amarillo")
+
+    nodoRojo.className = ('boton-rojo')
+    nodoVerde.className = ('boton-verde')
+    nodoAzul.className = ('boton-azul')
+    nodoAmarillo.className = ('boton-amarillo')
+}
+
 function turnoJugador(num) {
     permiteClickear()
     let nodoPuntaje = $form.puntaje
@@ -143,12 +167,14 @@ function turnoJugador(num) {
     if (num != secuenciaPc[turnos]) {
         noPermiteClickear()
         nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
+        gameOver()
         asignarPuntajeMaximo()
         return ''
     }
 }
 
 $form.start.onclick = function () {
+    gameStart()
     noPermiteClickear()
     puntaje.value = 0
     secuenciaPc = []
