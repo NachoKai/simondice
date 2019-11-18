@@ -49,7 +49,7 @@ body {
 .puntaje {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   font-weight: bold;
   grid-area: puntaje;
   justify-content: center;
@@ -165,6 +165,7 @@ body {
 
 .mensaje {
   display: flex;
+  flex-wrap: wrap;
   font-weight: bold;
   color: #000000;
   font-size: 20px;
@@ -275,7 +276,7 @@ input:focus {
   padding-bottom: 10px;
   text-align: left;
   border: none;
-  width: 150px;
+  width: 70px;
   background: white;
 }
 
@@ -284,7 +285,7 @@ input:focus {
   padding-bottom: 10px;
   text-align: left;
   border: none;
-  width: 150px;
+  width: 70px;
   background: white;
 }
 
