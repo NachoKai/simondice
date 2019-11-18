@@ -40,6 +40,7 @@ function turnoPc() {
 }
 
 function eligeRandom() {
+    noPermiteClickear()
     let nodoRojo = $form.querySelector("#rojo")
     let nodoVerde = $form.querySelector("#verde")
     let nodoAzul = $form.querySelector("#azul")
@@ -51,8 +52,7 @@ function eligeRandom() {
     let numerosRandoms = iteracionDeRandoms()
 
     for (let i = 0; i < numerosRandoms.length; i++) {
-        let j = i + 1
-        let tiempo = (j * 1000)
+        let tiempo = ((i + 1) * 1000)
 
         if (numerosRandoms[i] === eligeRojo) {
             setTimeout(function () {
@@ -141,20 +141,20 @@ function turnoJugador(num) {
     }
 
     if (num != secuenciaPc[turnos]) {
+        noPermiteClickear()
         nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
         asignarPuntajeMaximo()
-        noPermiteClickear()
         return ''
     }
 }
 
 $form.start.onclick = function () {
+    noPermiteClickear()
     puntaje.value = 0
     secuenciaPc = []
     turnos = 0
     mostrarMensajeSuerte()
     turnoPc()
-    noPermiteClickear()
 }
 
 $form.querySelector("#rojo").onclick = function (event) {
