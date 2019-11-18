@@ -515,3 +515,41 @@ input:focus {
     width: 25vw;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body,
+  .sector1,
+  .sector2,
+  .sector4,
+  .puntaje,
+  .mensaje,
+  #mensaje,
+  .start,
+  .puntaje,
+  .mensaje,
+  #mensaje,
+  #puntaje,
+  #pmaximo {
+    background: #000000;
+    color: #ffffff
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body,
+  .sector1,
+  .sector2,
+  .sector4,
+  .puntaje,
+  .mensaje,
+  #mensaje,
+  .start,
+  .puntaje,
+  .mensaje,
+  #mensaje,
+  #puntaje,
+  #pmaximo {
+    background: #ffffff;
+    color: #000000
+  }
+}
