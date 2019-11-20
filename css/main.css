@@ -70,7 +70,7 @@ body {
 
 .colores {
   position: relative;
-  min-height: 400px;
+  min-height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -462,6 +462,9 @@ input:focus {
   #amarillo {
     width: 80vw;
   }
+  .colores {
+    min-height: 250px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -479,6 +482,9 @@ input:focus {
 
   #amarillo {
     width: 40vw;
+  }
+  .colores {
+    min-height: 300px;
   }
 }
 
@@ -498,6 +504,9 @@ input:focus {
   #amarillo {
     width: 30vw;
   }
+  .colores {
+    min-height: 350px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {
@@ -515,6 +524,10 @@ input:focus {
 
   #amarillo {
     width: 25vw;
+  }
+
+  .colores {
+    min-height: 400px;
   }
 }
 
