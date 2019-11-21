@@ -33,10 +33,10 @@ function turnoPc() {
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
         nodoMensaje.value = 'Es el turno de la computadora...'
-    }, 1000)
+    }, 900)
     setTimeout(function () {
         eligeRandom()
-    }, 1000)
+    }, 900)
 }
 
 function eligeRandom() {
@@ -60,7 +60,7 @@ function eligeRandom() {
             }, tiempo)
             setTimeout(function () {
                 nodoRojo.className = ('boton-rojo')
-            }, tiempo + 500)
+            }, tiempo + 400)
         }
 
         if (numerosRandoms[i] === eligeVerde) {
@@ -69,7 +69,7 @@ function eligeRandom() {
             }, tiempo)
             setTimeout(function () {
                 nodoVerde.className = ('boton-verde')
-            }, tiempo + 500)
+            }, tiempo + 400)
         }
 
         if (numerosRandoms[i] === eligeAzul) {
@@ -78,7 +78,7 @@ function eligeRandom() {
             }, tiempo)
             setTimeout(function () {
                 nodoAzul.className = ('boton-azul')
-            }, tiempo + 500)
+            }, tiempo + 400)
         }
 
         if (numerosRandoms[i] === eligeAmarillo) {
@@ -87,12 +87,12 @@ function eligeRandom() {
             }, tiempo)
             setTimeout(function () {
                 nodoAmarillo.className = ('boton-amarillo')
-            }, tiempo + 500)
+            }, tiempo + 400)
         }
 
         setTimeout(function () {
             mostrarMensajeTurnoUser()
-        }, tiempo + 500)
+        }, tiempo + 400)
         turnos = 0
     }
 }
@@ -109,7 +109,7 @@ function mostrarMensajeTurnoUser() {
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
         nodoMensaje.value = 'Es tu turno!'
-    }, 500)
+    }, 400)
 }
 
 function asignarPuntajeMaximo() {
