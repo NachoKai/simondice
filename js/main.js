@@ -1,12 +1,4 @@
 const $form = document.querySelector("#form")
-let puntaje = $form.querySelector("#puntaje")
-let pmaximo = $form.querySelector("#pmaximo")
-let rojo = $form.querySelector("#rojo")
-let verde = $form.querySelector("#verde")
-let azul = $form.querySelector("#azul")
-let amarillo = $form.querySelector("#amarillo")
-let mensaje = $form.querySelector("#mensaje")
-let start = $form.querySelector("#start")
 let secuenciaPc = []
 let turnoUser = false
 let turnos = 0
@@ -52,7 +44,7 @@ function eligeRandom() {
     let numerosRandoms = iteracionDeRandoms()
 
     for (let i = 0; i < numerosRandoms.length; i++) {
-        let tiempo = ((i + 1) * 1000)
+        let tiempo = ((i + 1) * 900)
 
         if (numerosRandoms[i] === eligeRojo) {
             setTimeout(function () {
@@ -109,7 +101,7 @@ function mostrarMensajeTurnoUser() {
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
         nodoMensaje.value = 'Es tu turno!'
-    }, 400)
+    }, 500)
 }
 
 function asignarPuntajeMaximo() {
