@@ -5,6 +5,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.3s ease;
+  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   text-align: center;
   font-size: 16px;
@@ -15,81 +16,137 @@ body {
 }
 
 .grid-container {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 95vh;
   width: 99vw;
-  align-items: center;
-  justify-content: space-around;
-  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #ffffff;
   display: flex;
-  flex-direction: column;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "sector1""sector2""sector3""sector4";
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "sector1" "sector2" "sector3" "sector4";
 }
 
 .sector1 {
   background-color: #ffffff;
   padding: 2rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   width: 100%;
   color: #000000;
-  justify-content: space-around;
-  align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   padding: 5px;
   margin: 5px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "puntaje start pmaximo";
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "puntaje start pmaximo";
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: sector1;
 }
 
 .puntaje {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   font-weight: bold;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: puntaje;
-  justify-content: center;
-  align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .start {
   text-align: center;
   font-weight: bold;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: start;
 }
 
 .pmaximo {
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   text-align: center;
   font-weight: bold;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: pmaximo;
 }
 
 .colores {
   position: relative;
   min-height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   text-align: center;
 }
 
 .sector2 {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #ffffff;
   padding: 2rem 3rem;
+  display: -ms-grid;
   display: grid;
   padding: 5px;
   margin: 5px;
   height: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "rojo verde""azul amarillo";
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "rojo verde" "azul amarillo";
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: sector2;
 }
 
@@ -110,71 +167,116 @@ body {
 }
 
 .rojo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: rojo;
 }
 
 .verde {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: verde;
 }
 
 .azul {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: azul;
 }
 
 .amarillo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: amarillo;
 }
 
 .sector3 {
   background-color: #ffffff;
   padding: 2rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   width: 100%;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 5px;
   margin: 5px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "reiniciar continuar";
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "reiniciar continuar";
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: sector3;
 }
 
 .reiniciar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: reiniciar;
 }
 
 .continuar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: continuar;
 }
 
 .sector4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #ffffff;
   padding: 2rem 3rem;
   color: #000000;
   padding: 5px;
   margin: 5px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "mensaje";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "mensaje";
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: sector4;
 }
 
 .mensaje {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-weight: bold;
   color: #000000;
   font-size: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: mensaje;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mensajeWin {
@@ -186,11 +288,16 @@ body {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
   position: relative;
-  justify-content: center;
-  align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   bottom: 0;
 }
 
@@ -205,7 +312,6 @@ footer {
 }
 
 /* botones */
-
 #start {
   font-size: 25px;
   line-height: 105%;
@@ -227,17 +333,20 @@ footer {
   text-align: center;
   padding: 0.5rem 1.5rem;
   border-radius: 0.25rem;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none;
   font-weight: 700;
   cursor: pointer;
   margin-bottom: 2rem;
   height: 40px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   line-height: 150%;
-  background: rgb(221, 135, 54);
+  background: #dd8736;
 }
 
 input {
@@ -249,7 +358,6 @@ input:focus {
   outline: none;
 }
 
-
 .button:active {
   height: 36px;
   outline: 0;
@@ -257,11 +365,10 @@ input:focus {
 
 .button:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-  background: rgb(224, 112, 6);
+  background: #e07006;
 }
 
 /* inputs */
-
 #mensaje {
   width: 280px;
   border: none;
@@ -269,8 +376,12 @@ input:focus {
   color: #000000;
   background: white;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #puntaje {
@@ -295,10 +406,13 @@ input:focus {
 .boton-rojo {
   height: 100%;
   width: 100%;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none;
   cursor: pointer;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #ed1b24;
 }
 
@@ -317,10 +431,13 @@ input:focus {
 .boton-verde {
   height: 100%;
   width: 100%;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none;
   cursor: pointer;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   line-height: 150%;
   background: #23b14d;
 }
@@ -340,10 +457,13 @@ input:focus {
 .boton-azul {
   height: 100%;
   width: 100%;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none;
   cursor: pointer;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   line-height: 150%;
   background: #00a3e8;
 }
@@ -363,10 +483,13 @@ input:focus {
 .boton-amarillo {
   height: 100%;
   width: 100%;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none;
   cursor: pointer;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   line-height: 150%;
   background: #fef200;
 }
@@ -383,12 +506,13 @@ input:focus {
 }
 
 /* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
-
 /* boton rojo activado */
 .rojoActivado {
   height: 110%;
   width: 110%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #ff636b;
   z-index: 99;
   position: relative;
@@ -398,7 +522,9 @@ input:focus {
 .verdeActivado {
   height: 110%;
   width: 110%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   line-height: 150%;
   background: #6be28f;
   z-index: 99;
@@ -409,7 +535,9 @@ input:focus {
 .azulActivado {
   height: 110%;
   width: 110%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   line-height: 150%;
   background: #5fc8f5;
   z-index: 99;
@@ -420,7 +548,9 @@ input:focus {
 .amarilloActivado {
   height: 110%;
   width: 110%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   line-height: 150%;
   background: #fff764;
   z-index: 99;
@@ -428,7 +558,6 @@ input:focus {
 }
 
 /* scrollbar */
-
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -446,19 +575,15 @@ input:focus {
 }
 
 @media screen and (min-width: 0px) and (max-width: 320px) {
-
   #rojo {
     width: 80vw;
   }
-
   #verde {
     width: 80vw;
   }
-
   #azul {
     width: 80vw;
   }
-
   #amarillo {
     width: 80vw;
   }
@@ -471,15 +596,12 @@ input:focus {
   #rojo {
     width: 40vw;
   }
-
   #verde {
     width: 40vw;
   }
-
   #azul {
     width: 40vw;
   }
-
   #amarillo {
     width: 40vw;
   }
@@ -492,15 +614,12 @@ input:focus {
   #rojo {
     width: 30vw;
   }
-
   #verde {
     width: 30vw;
   }
-
   #azul {
     width: 30vw;
   }
-
   #amarillo {
     width: 30vw;
   }
@@ -513,26 +632,21 @@ input:focus {
   #rojo {
     width: 25vw;
   }
-
   #verde {
     width: 25vw;
   }
-
   #azul {
     width: 25vw;
   }
-
   #amarillo {
     width: 25vw;
   }
-
   .colores {
     min-height: 400px;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-
   body,
   .sector1,
   .sector2,
@@ -549,12 +663,11 @@ input:focus {
   .link,
   .link:hover {
     background: #000000;
-    color: #ffffff
+    color: #ffffff;
   }
 }
 
 @media (prefers-color-scheme: light) {
-
   body,
   .sector1,
   .sector2,
@@ -571,6 +684,7 @@ input:focus {
   .link,
   .link:hover {
     background: #ffffff;
-    color: #000000
+    color: #000000;
   }
 }
+/*# sourceMappingURL=styles.css.map */
