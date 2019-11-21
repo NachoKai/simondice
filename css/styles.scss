@@ -8,13 +8,13 @@
     transition: all 0.1s ease;
     text-align: center;
     font-size: 16px;
-  }
-  
-  body {
+}
+
+body {
     background: white;
-  }
-  
-  .grid-container {
+}
+
+.grid-container {
     justify-content: center;
     display: flex;
     height: 95vh;
@@ -27,9 +27,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: "sector1""sector2""sector3""sector4";
-  }
-  
-  .sector1 {
+}
+
+.sector1 {
     background-color: #ffffff;
     padding: 2rem 3rem;
     display: flex;
@@ -44,9 +44,9 @@
     grid-template-rows: 1fr;
     grid-template-areas: "puntaje start pmaximo";
     grid-area: sector1;
-  }
-  
-  .puntaje {
+}
+
+.puntaje {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -54,22 +54,22 @@
     grid-area: puntaje;
     justify-content: center;
     align-items: baseline;
-  }
-  
-  .start {
+}
+
+.start {
     text-align: center;
     font-weight: bold;
     grid-area: start;
-  }
-  
-  .pmaximo {
+}
+
+.pmaximo {
     align-items: baseline;
     text-align: center;
     font-weight: bold;
     grid-area: pmaximo;
-  }
-  
-  .colores {
+}
+
+.colores {
     position: relative;
     min-height: 450px;
     display: flex;
@@ -77,9 +77,9 @@
     align-items: center;
     align-content: center;
     text-align: center;
-  }
-  
-  .sector2 {
+}
+
+.sector2 {
     justify-content: center;
     background-color: #ffffff;
     padding: 2rem 3rem;
@@ -91,41 +91,41 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "rojo verde""azul amarillo";
     grid-area: sector2;
-  }
-  
-  #rojo {
+}
+
+#rojo {
     width: 15vw;
-  }
-  
-  #verde {
+}
+
+#verde {
     width: 15vw;
-  }
-  
-  #azul {
+}
+
+#azul {
     width: 15vw;
-  }
-  
-  #amarillo {
+}
+
+#amarillo {
     width: 15vw;
-  }
-  
-  .rojo {
+}
+
+.rojo {
     grid-area: rojo;
-  }
-  
-  .verde {
+}
+
+.verde {
     grid-area: verde;
-  }
-  
-  .azul {
+}
+
+.azul {
     grid-area: azul;
-  }
-  
-  .amarillo {
+}
+
+.amarillo {
     grid-area: amarillo;
-  }
-  
-  .sector3 {
+}
+
+.sector3 {
     background-color: #ffffff;
     padding: 2rem 3rem;
     display: flex;
@@ -139,17 +139,17 @@
     grid-template-rows: 1fr;
     grid-template-areas: "reiniciar continuar";
     grid-area: sector3;
-  }
-  
-  .reiniciar {
+}
+
+.reiniciar {
     grid-area: reiniciar;
-  }
-  
-  .continuar {
+}
+
+.continuar {
     grid-area: continuar;
-  }
-  
-  .sector4 {
+}
+
+.sector4 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -163,9 +163,9 @@
     grid-template-rows: 1fr;
     grid-template-areas: "mensaje";
     grid-area: sector4;
-  }
-  
-  .mensaje {
+}
+
+.mensaje {
     display: flex;
     flex-wrap: wrap;
     font-weight: bold;
@@ -175,52 +175,58 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-  }
-  
-  .mensajeWin {
+}
+
+.mensajeWin {
     background: #00ff6a;
-  }
-  
-  .mensajeLose {
+}
+
+.mensajeLose {
     background: #ff0000;
-  }
-  
-  footer {
+}
+
+footer {
     display: flex;
     text-align: center;
     position: relative;
     justify-content: center;
     align-content: center;
     bottom: 0;
-  }
-  
-  .link {
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.link {
     bottom: 0;
     font-size: 15px;
-  }
-  
-  .link:active {
+}
+
+.link:active {
     font-size: 14px;
     outline: 0;
-  }
-  
-  /* botones */
-  
-  #start {
+}
+
+/* botones */
+
+#start {
     font-size: 25px;
     line-height: 105%;
-  }
-  
-  #start:active {
+}
+
+#start:active {
     height: 44px;
     outline: 0;
-  }
-  
-  .button:focus {
+}
+
+.button:focus {
     outline: 0;
-  }
-  
-  .button {
+}
+
+.button {
     font-size: 15px;
     display: inline-block;
     color: #FFFFFF;
@@ -238,31 +244,31 @@
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     line-height: 150%;
     background: rgb(221, 135, 54);
-  }
-  
-  input {
+}
+
+input {
     color: transparent;
     text-shadow: 0 0 0 #2196f3;
-  }
-  
-  input:focus {
+}
+
+input:focus {
     outline: none;
-  }
-  
-  
-  .button:active {
+}
+
+
+.button:active {
     height: 36px;
     outline: 0;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
     background: rgb(224, 112, 6);
-  }
-  
-  /* inputs */
-  
-  #mensaje {
+}
+
+/* inputs */
+
+#mensaje {
     width: 280px;
     border: none;
     font-size: 20px;
@@ -271,28 +277,28 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-  }
-  
-  #puntaje {
+}
+
+#puntaje {
     font-size: 25px;
     padding-bottom: 10px;
     text-align: left;
     border: none;
     width: 70px;
     background: white;
-  }
-  
-  #pmaximo {
+}
+
+#pmaximo {
     font-size: 25px;
     padding-bottom: 10px;
     text-align: left;
     border: none;
     width: 70px;
     background: white;
-  }
-  
-  /* boton rojo */
-  .boton-rojo {
+}
+
+/* boton rojo */
+.boton-rojo {
     height: 100%;
     width: 100%;
     box-shadow: none;
@@ -300,21 +306,21 @@
     cursor: pointer;
     align-self: center;
     background: #ed1b24;
-  }
-  
-  .boton-rojo:active {
+}
+
+.boton-rojo:active {
     background: #d31721;
     height: 96%;
     width: 96%;
     outline: 0;
-  }
-  
-  .boton-rojo:hover {
+}
+
+.boton-rojo:hover {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-  }
-  
-  /* boton verde */
-  .boton-verde {
+}
+
+/* boton verde */
+.boton-verde {
     height: 100%;
     width: 100%;
     box-shadow: none;
@@ -323,21 +329,21 @@
     align-self: center;
     line-height: 150%;
     background: #23b14d;
-  }
-  
-  .boton-verde:active {
+}
+
+.boton-verde:active {
     background: #1ca144;
     height: 96%;
     width: 96%;
     outline: 0;
-  }
-  
-  .boton-verde:hover {
+}
+
+.boton-verde:hover {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-  }
-  
-  /* boton azul */
-  .boton-azul {
+}
+
+/* boton azul */
+.boton-azul {
     height: 100%;
     width: 100%;
     box-shadow: none;
@@ -346,21 +352,21 @@
     align-self: center;
     line-height: 150%;
     background: #00a3e8;
-  }
-  
-  .boton-azul:active {
+}
+
+.boton-azul:active {
     background: #0094d3;
     height: 96%;
     width: 96%;
     outline: 0;
-  }
-  
-  .boton-azul:hover {
+}
+
+.boton-azul:hover {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-  }
-  
-  /* boton amarillo */
-  .boton-amarillo {
+}
+
+/* boton amarillo */
+.boton-amarillo {
     height: 100%;
     width: 100%;
     box-shadow: none;
@@ -369,33 +375,33 @@
     align-self: center;
     line-height: 150%;
     background: #fef200;
-  }
-  
-  .boton-amarillo:active {
+}
+
+.boton-amarillo:active {
     background: #e6da00;
     height: 96%;
     width: 96%;
     outline: 0;
-  }
-  
-  .boton-amarillo:hover {
+}
+
+.boton-amarillo:hover {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-  }
-  
-  /* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
-  
-  /* boton rojo activado */
-  .rojoActivado {
+}
+
+/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+
+/* boton rojo activado */
+.rojoActivado {
     height: 110%;
     width: 110%;
     align-self: center;
     background: #ff636b;
     z-index: 99;
     position: relative;
-  }
-  
-  /* boton verde activado */
-  .verdeActivado {
+}
+
+/* boton verde activado */
+.verdeActivado {
     height: 110%;
     width: 110%;
     align-self: center;
@@ -403,10 +409,10 @@
     background: #6be28f;
     z-index: 99;
     position: relative;
-  }
-  
-  /* boton azul activado */
-  .azulActivado {
+}
+
+/* boton azul activado */
+.azulActivado {
     height: 110%;
     width: 110%;
     align-self: center;
@@ -414,10 +420,10 @@
     background: #5fc8f5;
     z-index: 99;
     position: relative;
-  }
-  
-  /* boton amarillo activado */
-  .amarilloActivado {
+}
+
+/* boton amarillo activado */
+.amarilloActivado {
     height: 110%;
     width: 110%;
     align-self: center;
@@ -425,114 +431,117 @@
     background: #fff764;
     z-index: 99;
     position: relative;
-  }
-  
-  /* scrollbar */
-  
-  ::-webkit-scrollbar {
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
     width: 15px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: #888;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
-  
-  @media screen and (min-width: 0px) and (max-width: 320px) {
-  
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+
     #rojo {
-      width: 80vw;
+        width: 80vw;
     }
-  
+
     #verde {
-      width: 80vw;
+        width: 80vw;
     }
-  
+
     #azul {
-      width: 80vw;
+        width: 80vw;
     }
-  
+
     #amarillo {
-      width: 80vw;
+        width: 80vw;
     }
+
     .colores {
-      min-height: 250px;
+        min-height: 250px;
     }
-  }
-  
-  @media screen and (min-width: 320px) and (max-width: 480px) {
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
     #rojo {
-      width: 40vw;
+        width: 40vw;
     }
-  
+
     #verde {
-      width: 40vw;
+        width: 40vw;
     }
-  
+
     #azul {
-      width: 40vw;
+        width: 40vw;
     }
-  
+
     #amarillo {
-      width: 40vw;
+        width: 40vw;
     }
+
     .colores {
-      min-height: 300px;
+        min-height: 300px;
     }
-  }
-  
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
     #rojo {
-      width: 30vw;
+        width: 30vw;
     }
-  
+
     #verde {
-      width: 30vw;
+        width: 30vw;
     }
-  
+
     #azul {
-      width: 30vw;
+        width: 30vw;
     }
-  
+
     #amarillo {
-      width: 30vw;
+        width: 30vw;
     }
+
     .colores {
-      min-height: 350px;
+        min-height: 350px;
     }
-  }
-  
-  @media screen and (min-width: 768px) and (max-width: 1000px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
     #rojo {
-      width: 25vw;
+        width: 25vw;
     }
-  
+
     #verde {
-      width: 25vw;
+        width: 25vw;
     }
-  
+
     #azul {
-      width: 25vw;
+        width: 25vw;
     }
-  
+
     #amarillo {
-      width: 25vw;
+        width: 25vw;
     }
-  
+
     .colores {
-      min-height: 400px;
+        min-height: 400px;
     }
-  }
-  
-  @media (prefers-color-scheme: dark) {
-  
+}
+
+@media (prefers-color-scheme: dark) {
+
     body,
     .sector1,
     .sector2,
@@ -548,13 +557,13 @@
     #pmaximo,
     .link,
     .link:hover {
-      background: #000000;
-      color: #ffffff
+        background: #000000;
+        color: #ffffff
     }
-  }
-  
-  @media (prefers-color-scheme: light) {
-  
+}
+
+@media (prefers-color-scheme: light) {
+
     body,
     .sector1,
     .sector2,
@@ -570,7 +579,7 @@
     #pmaximo,
     .link,
     .link:hover {
-      background: #ffffff;
-      color: #000000
+        background: #ffffff;
+        color: #000000
     }
-  }
+}
