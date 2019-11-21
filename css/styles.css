@@ -22,8 +22,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 95vh;
+  height: 99vh;
   width: 99vw;
+  margin: 0;
+  padding: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -298,9 +300,9 @@ footer {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  bottom: 0;
   border-bottom: solid 1px;
   border-top: solid 1px;
+  bottom: 0px;
 }
 
 footer a {
@@ -308,7 +310,6 @@ footer a {
 }
 
 .link {
-  bottom: 0;
   font-size: 15px;
 }
 
