@@ -97,11 +97,11 @@ function iteracionDeRandoms() {
 }
 
 function mostrarMensajeTurnoUser() {
-    permiteClickear()
     let nodoMensaje = $form.mensaje
     setTimeout(function () {
         nodoMensaje.value = 'Es tu turno!'
     }, 500)
+    permiteClickear()
 }
 
 function asignarPuntajeMaximo() {
