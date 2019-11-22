@@ -52,7 +52,7 @@ function eligeRandom() {
             }, tiempo)
             setTimeout(function () {
                 nodoRojo.className = ('boton-rojo')
-            }, tiempo + 400)
+            }, tiempo + 500)
         }
 
         if (numerosRandoms[i] === eligeVerde) {
@@ -61,7 +61,7 @@ function eligeRandom() {
             }, tiempo)
             setTimeout(function () {
                 nodoVerde.className = ('boton-verde')
-            }, tiempo + 400)
+            }, tiempo + 500)
         }
 
         if (numerosRandoms[i] === eligeAzul) {
@@ -70,7 +70,7 @@ function eligeRandom() {
             }, tiempo)
             setTimeout(function () {
                 nodoAzul.className = ('boton-azul')
-            }, tiempo + 400)
+            }, tiempo + 500)
         }
 
         if (numerosRandoms[i] === eligeAmarillo) {
@@ -79,12 +79,12 @@ function eligeRandom() {
             }, tiempo)
             setTimeout(function () {
                 nodoAmarillo.className = ('boton-amarillo')
-            }, tiempo + 400)
+            }, tiempo + 500)
         }
 
         setTimeout(function () {
             mostrarMensajeTurnoUser()
-        }, tiempo + 400)
+        }, tiempo + 500)
         turnos = 0
     }
 }
