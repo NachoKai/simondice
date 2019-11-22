@@ -2,39 +2,39 @@ const $form = document.querySelector("#form")
 let secuenciaPc = []
 let turnoUser = false
 let turnos = 0
-let sonidoUno = document.querySelector("#audio-uno")
-let sonidoDos = document.querySelector("#audio-dos")
-let sonidoTres = document.querySelector("#audio-tres")
-let sonidoCuatro = document.querySelector("#audio-cuatro")
-let sonidoCorrect = document.querySelector("#audio-correct")
-let sonidoWrong = document.querySelector("#audio-wrong")
-let sonidoStart = document.querySelector("#audio-start")
 
 function play1() {
+    let sonidoUno = document.querySelector("#audio-uno")
     sonidoUno.play();
 }
 
 function play2() {
+    let sonidoDos = document.querySelector("#audio-dos")
     sonidoDos.play();
 }
 
 function play3() {
+    let sonidoTres = document.querySelector("#audio-tres")
     sonidoTres.play();
 }
 
 function play4() {
+    let sonidoCuatro = document.querySelector("#audio-cuatro")
     sonidoCuatro.play();
 }
 
 function playStart() {
+    let sonidoStart = document.querySelector("#audio-start")
     sonidoStart.play();
 }
 
 function playCorrect() {
+    let sonidoCorrect = document.querySelector("#audio-correct")
     sonidoCorrect.play();
 }
 
 function playWrong() {
+    let sonidoWrong = document.querySelector("#audio-wrong")
     sonidoWrong.play();
 }
 
