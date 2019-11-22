@@ -2,6 +2,41 @@ const $form = document.querySelector("#form")
 let secuenciaPc = []
 let turnoUser = false
 let turnos = 0
+let sonidoUno = document.querySelector("#audio-uno")
+let sonidoDos = document.querySelector("#audio-dos")
+let sonidoTres = document.querySelector("#audio-tres")
+let sonidCuatro = document.querySelector("#audio-cuatro")
+let sonidoCorrect = document.querySelector("#audio-correct")
+let sonidoWrong = document.querySelector("#audio-wrong")
+let sonidoStart = document.querySelector("#audio-start")
+
+function play1() {
+    sonidoUno.play();
+}
+
+function play2() {
+    sonidoDos.play();
+}
+
+function play3() {
+    sonidoTres.play();
+}
+
+function play4() {
+    sonidoCuatro.play();
+}
+
+function playStart() {
+    sonidoStart.play();
+}
+
+function playCorrect() {
+    sonidoCorrect.play();
+}
+
+function playWrong() {
+    sonidoWrong.play();
+}
 
 function permiteClickear() {
     if (turnoUser === false) {
@@ -48,43 +83,47 @@ function eligeRandom() {
 
         if (numerosRandoms[i] === eligeRojo) {
             setTimeout(function () {
+                play1()
                 nodoRojo.className = ('rojoActivado')
             }, tiempo)
             setTimeout(function () {
                 nodoRojo.className = ('boton-rojo')
-            }, tiempo + 400)
+            }, tiempo + 500)
         }
 
         if (numerosRandoms[i] === eligeVerde) {
             setTimeout(function () {
+                play2()
                 nodoVerde.className = ('verdeActivado')
             }, tiempo)
             setTimeout(function () {
                 nodoVerde.className = ('boton-verde')
-            }, tiempo + 400)
+            }, tiempo + 500)
         }
 
         if (numerosRandoms[i] === eligeAzul) {
             setTimeout(function () {
+                play3()
                 nodoAzul.className = ('azulActivado')
             }, tiempo)
             setTimeout(function () {
                 nodoAzul.className = ('boton-azul')
-            }, tiempo + 400)
+            }, tiempo + 500)
         }
 
         if (numerosRandoms[i] === eligeAmarillo) {
             setTimeout(function () {
+                play4()
                 nodoAmarillo.className = ('amarilloActivado')
             }, tiempo)
             setTimeout(function () {
                 nodoAmarillo.className = ('boton-amarillo')
-            }, tiempo + 400)
+            }, tiempo + 500)
         }
 
         setTimeout(function () {
             mostrarMensajeTurnoUser()
-        }, tiempo + 400)
+        }, tiempo + 500)
         turnos = 0
     }
 }
@@ -114,7 +153,7 @@ function asignarPuntajeMaximo() {
     }
 }
 
-function gameOver(){
+function gameOver() {
     let nodoRojo = $form.querySelector("#rojo")
     let nodoVerde = $form.querySelector("#verde")
     let nodoAzul = $form.querySelector("#azul")
@@ -126,7 +165,7 @@ function gameOver(){
     nodoAmarillo.className = ('amarilloActivado')
 }
 
-function gameStart(){
+function gameStart() {
     let nodoRojo = $form.querySelector("#rojo")
     let nodoVerde = $form.querySelector("#verde")
     let nodoAzul = $form.querySelector("#azul")
@@ -148,6 +187,7 @@ function turnoJugador(num) {
         if (turnos === secuenciaPc.length - 1) {
             nodoMensaje.value = 'Correcto!'
             nodoPuntaje.value = puntaje + 1
+            playCorrect()
             asignarPuntajeMaximo()
             turnoPc()
         } else {
@@ -159,6 +199,7 @@ function turnoJugador(num) {
     if (num != secuenciaPc[turnos]) {
         noPermiteClickear()
         nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
+        playWrong()
         gameOver()
         asignarPuntajeMaximo()
         return ''
@@ -166,6 +207,7 @@ function turnoJugador(num) {
 }
 
 $form.start.onclick = function () {
+    playStart()
     gameStart()
     noPermiteClickear()
     puntaje.value = 0
@@ -176,6 +218,7 @@ $form.start.onclick = function () {
 }
 
 $form.querySelector("#rojo").onclick = function (event) {
+    play1()
     if (turnoUser === true) {
         turnoJugador(1)
         event.preventDefault()
@@ -185,6 +228,7 @@ $form.querySelector("#rojo").onclick = function (event) {
 }
 
 $form.querySelector("#verde").onclick = function (event) {
+    play2()
     if (turnoUser === true) {
         turnoJugador(2)
         event.preventDefault()
@@ -194,6 +238,7 @@ $form.querySelector("#verde").onclick = function (event) {
 }
 
 $form.querySelector("#azul").onclick = function (event) {
+    play3()
     if (turnoUser === true) {
         turnoJugador(3)
         event.preventDefault()
@@ -203,6 +248,7 @@ $form.querySelector("#azul").onclick = function (event) {
 }
 
 $form.querySelector("#amarillo").onclick = function (event) {
+    play4()
     if (turnoUser === true) {
         turnoJugador(4)
         event.preventDefault()
