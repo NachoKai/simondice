@@ -188,7 +188,6 @@ function turnoJugador(num) {
             nodoMensaje.value = 'Correcto!'
             nodoPuntaje.value = puntaje + 1
             playCorrect()
-            asignarPuntajeMaximo()
             turnoPc()
         } else {
             turnos++
