@@ -2,8 +2,9 @@
   
 ## [Live Demo](https://nachokai.github.io/simondice/)  
 •HTML  
-•CSS (Grid, Flexbox, Responsive Design)  
+•CSS (Scss, Grid, Flexbox, Responsive Design)  
 •Javascript  
+•Google Fonts  
 
 ## Diseño PC (modo dark)  
 ![Imagen PC](https://github.com/NachoKai/simondice/blob/gh-pages/img/pc.png?raw=true)  
