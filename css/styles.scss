@@ -15,16 +15,12 @@ body {
 }
 
 .grid-container {
-  justify-content: center;
   display: flex;
   height: 99vh;
   width: 99vw;
-  margin: 0;
-  padding: 0;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: #ffffff;
-  display: flex;
   flex-direction: column;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
