@@ -43,6 +43,14 @@ body {
   width: 100%;
 }
 
+#plabel {
+  padding-right: 10px;
+}
+
+#pmlabel {
+  padding-right: 10px;
+}
+
 .puntaje {
   align-items: baseline;
   display: flex;
@@ -80,7 +88,7 @@ body {
   background-color: #fff;
   display: grid;
   grid-area: sector2;
-  grid-template-areas: "rojo verde" "azul amarillo";
+  grid-template-areas: "rojo verde""azul amarillo";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: 100%;
@@ -397,7 +405,7 @@ input:focus {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
 }
 
-@media screen and min-width 0px and max-width 320px {
+@media screen and (min-width: 0px) and (max-width: 320px) {
   .colores {
     min-height: 250px;
   }
@@ -410,7 +418,7 @@ input:focus {
   }
 }
 
-@media screen and min-width 320px and max-width 480px {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .colores {
     min-height: 300px;
   }
@@ -423,7 +431,7 @@ input:focus {
   }
 }
 
-@media screen and min-width 480px and max-width 768px {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .colores {
     min-height: 350px;
   }
@@ -436,7 +444,7 @@ input:focus {
   }
 }
 
-@media screen and min-width 768px and max-width 1000px {
+@media screen and (min-width: 768px) and (max-width: 1000px) {
   .colores {
     min-height: 400px;
   }
@@ -449,7 +457,8 @@ input:focus {
   }
 }
 
-@media prefers-color-scheme dark {
+@media (prefers-color-scheme: dark) {
+
   body,
   .sector1,
   .sector2,
@@ -470,7 +479,8 @@ input:focus {
   }
 }
 
-@media prefers-color-scheme light {
+@media (prefers-color-scheme: light) {
+
   body,
   .sector1,
   .sector2,
