@@ -32,11 +32,10 @@ body {
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
-  height: 99vh;
+  height: calc(100vh - 20px);
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 99vw;
 }
 
 .sector1 {
@@ -126,6 +125,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 450px;
   position: relative;
   text-align: center;
 }
@@ -268,9 +268,8 @@ body {
 footer {
   -ms-flex-line-pack: center;
       align-content: center;
-  border-bottom: solid 1px;
-  border-top: solid 1px;
   bottom: 0;
+  height: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,6 +369,8 @@ input:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   cursor: pointer;
+  height: 100%;
+  width: 100%;
 }
 
 .boton-rojo:active {
@@ -388,7 +389,9 @@ input:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   cursor: pointer;
+  height: 100%;
   line-height: 150%;
+  width: 100%;
 }
 
 .boton-verde:active {
@@ -407,7 +410,9 @@ input:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   cursor: pointer;
+  height: 100%;
   line-height: 150%;
+  width: 100%;
 }
 
 .boton-azul:active {
@@ -426,7 +431,9 @@ input:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   cursor: pointer;
+  height: 100%;
   line-height: 150%;
+  width: 100%;
 }
 
 .boton-amarillo:active {
@@ -503,8 +510,7 @@ input:focus {
 #verde,
 #azul,
 #amarillo {
-  height: 20rem;
-  width: 20rem;
+  width: 15vw;
 }
 
 #puntaje,
@@ -522,6 +528,54 @@ input:focus {
 .boton-azul:hover,
 .boton-amarillo:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .colores {
+    min-height: 250px;
+  }
+  #rojo,
+  #verde,
+  #azul,
+  #amarillo {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .colores {
+    min-height: 300px;
+  }
+  #rojo,
+  #verde,
+  #azul,
+  #amarillo {
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .colores {
+    min-height: 350px;
+  }
+  #rojo,
+  #verde,
+  #azul,
+  #amarillo {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .colores {
+    min-height: 400px;
+  }
+  #rojo,
+  #verde,
+  #azul,
+  #amarillo {
+    width: 25vw;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
