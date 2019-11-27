@@ -22,8 +22,9 @@ body {
   grid-template-areas: sector1 sector2 sector3 sector4;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  min-height: calc(100vh - 18px);
-  justify-content: space-around;
+  height: 99vh;
+  justify-content: space-evenly;
+  width: 99vw;
 }
 
 .sector1 {
@@ -37,6 +38,8 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-around;
+  margin: 5px;
+  padding: 5px;
   width: 100%;
 }
 
@@ -76,7 +79,6 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 450px;
   position: relative;
   text-align: center;
 }
@@ -90,6 +92,8 @@ body {
   grid-template-rows: 1fr 1fr;
   height: 100%;
   justify-content: center;
+  margin: 5px;
+  padding: 5px;
 }
 
 .rojo {
@@ -118,6 +122,8 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-around;
+  margin: 5px;
+  padding: 5px;
   width: 100%;
 }
 
@@ -140,6 +146,8 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   justify-content: center;
+  margin: 5px;
+  padding: 5px;
 }
 
 .mensaje {
@@ -163,9 +171,10 @@ body {
 }
 
 footer {
-  width: 100%;
-  height: 18px;
   align-content: center;
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  bottom: 0;
   display: flex;
   justify-content: center;
   position: relative;
@@ -251,8 +260,6 @@ input:focus {
   border: none;
   box-shadow: none;
   cursor: pointer;
-  height: 15rem;
-  width: 15rem;
 }
 
 .boton-rojo:active {
@@ -269,8 +276,6 @@ input:focus {
   box-shadow: none;
   cursor: pointer;
   line-height: 150%;
-  height: 15rem;
-  width: 15rem;
 }
 
 .boton-verde:active {
@@ -286,16 +291,14 @@ input:focus {
   border: none;
   box-shadow: none;
   cursor: pointer;
-  height: 100%;
   line-height: 150%;
-  width: 100%;
 }
 
 .boton-azul:active {
   background: #0094d3;
+  height: 96%;
   outline: 0;
-  height: 15rem;
-  width: 15rem;
+  width: 96%;
 }
 
 .boton-amarillo {
@@ -305,8 +308,6 @@ input:focus {
   box-shadow: none;
   cursor: pointer;
   line-height: 150%;
-  height: 15rem;
-  width: 15rem;
 }
 
 .boton-amarillo:active {
@@ -375,7 +376,8 @@ input:focus {
 #verde,
 #azul,
 #amarillo {
-  width: 15vw;
+  height: 20rem;
+  width: 20rem;
 }
 
 #puntaje,
@@ -397,53 +399,53 @@ input:focus {
 
 @media screen and (min-width: 0px) and (max-width: 320px) {
   .colores {
-    min-height: 250px;
+
   }
 
   #rojo,
   #verde,
   #azul,
   #amarillo {
-    width: 80vw;
+
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .colores {
-    min-height: 300px;
+   
   }
 
   #rojo,
   #verde,
   #azul,
   #amarillo {
-    width: 40vw;
+    
   }
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .colores {
-    min-height: 350px;
+    
   }
 
   #rojo,
   #verde,
   #azul,
   #amarillo {
-    width: 30vw;
+    
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .colores {
-    min-height: 400px;
+    
   }
 
   #rojo,
   #verde,
   #azul,
   #amarillo {
-    width: 25vw;
+    
   }
 }
 
