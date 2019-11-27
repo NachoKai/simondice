@@ -22,9 +22,8 @@ body {
   grid-template-areas: sector1 sector2 sector3 sector4;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  height: 99vh;
-  justify-content: space-evenly;
-  width: 99vw;
+  min-height: calc(100vh - 20px);
+  justify-content: space-around;
 }
 
 .sector1 {
@@ -38,8 +37,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-around;
-  margin: 5px;
-  padding: 5px;
   width: 100%;
 }
 
@@ -93,8 +90,6 @@ body {
   grid-template-rows: 1fr 1fr;
   height: 100%;
   justify-content: center;
-  margin: 5px;
-  padding: 5px;
 }
 
 .rojo {
@@ -123,8 +118,6 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-around;
-  margin: 5px;
-  padding: 5px;
   width: 100%;
 }
 
@@ -147,8 +140,6 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   justify-content: center;
-  margin: 5px;
-  padding: 5px;
 }
 
 .mensaje {
@@ -172,10 +163,9 @@ body {
 }
 
 footer {
+  width: 100%;
+  height: 18px;
   align-content: center;
-  border-bottom: solid 1px;
-  border-top: solid 1px;
-  bottom: 0;
   display: flex;
   justify-content: center;
   position: relative;
@@ -261,8 +251,8 @@ input:focus {
   border: none;
   box-shadow: none;
   cursor: pointer;
-  height: 100%;
-  width: 100%;
+  height: 15rem;
+  width: 15rem;
 }
 
 .boton-rojo:active {
@@ -278,9 +268,9 @@ input:focus {
   border: none;
   box-shadow: none;
   cursor: pointer;
-  height: 100%;
   line-height: 150%;
-  width: 100%;
+  height: 15rem;
+  width: 15rem;
 }
 
 .boton-verde:active {
@@ -303,9 +293,9 @@ input:focus {
 
 .boton-azul:active {
   background: #0094d3;
-  height: 96%;
   outline: 0;
-  width: 96%;
+  height: 15rem;
+  width: 15rem;
 }
 
 .boton-amarillo {
@@ -314,9 +304,9 @@ input:focus {
   border: none;
   box-shadow: none;
   cursor: pointer;
-  height: 100%;
   line-height: 150%;
-  width: 100%;
+  height: 15rem;
+  width: 15rem;
 }
 
 .boton-amarillo:active {
