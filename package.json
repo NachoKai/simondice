@@ -1,0 +1,23 @@
+{
+  "name": "simondice",
+  "version": "1.0.0",
+  "description": "•HTML  \r •CSS (Scss, Grid, Flexbox, Responsive Design)  \r •Javascript  \r •Google Fonts",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^3.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NachoKai/simondice.git"
+  },
+  "author": "Nacho Caiafa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NachoKai/simondice/issues"
+  },
+  "homepage": "https://github.com/NachoKai/simondice#readme"
+}

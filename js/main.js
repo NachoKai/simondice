@@ -1,5 +1,6 @@
 const $form = document.querySelector("#form")
 let secuenciaPc = []
+let secuenciaUser = []
 let turnoUser = false
 let turnos = 0
 
