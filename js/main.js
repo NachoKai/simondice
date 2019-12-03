@@ -39,6 +39,11 @@ function playWrong() {
     sonidoWrong.play();
 }
 
+function actualizarMensaje(mensaje) {
+    const $mensaje = document.querySelector('#mensaje');
+    $mensaje.value = mensaje;
+}
+
 function permiteClickear() {
     if (turnoUser === false) {
         return turnoUser = true
@@ -51,16 +56,10 @@ function noPermiteClickear() {
     }
 }
 
-function mostrarMensajeSuerte() {
-    let nodoMensaje = $form.mensaje
-    nodoMensaje.value = 'Suerte!'
-}
-
 function turnoPc() {
     noPermiteClickear()
-    let nodoMensaje = $form.mensaje
     setTimeout(function () {
-        nodoMensaje.value = 'Es el turno de la computadora...'
+        actualizarMensaje('Es el turno de la computadora...')
     }, 900)
     setTimeout(function () {
         eligeRandom()
@@ -123,7 +122,8 @@ function eligeRandom() {
         }
 
         setTimeout(function () {
-            mostrarMensajeTurnoUser()
+            actualizarMensaje('Es tu turno!')
+            permiteClickear()
         }, tiempo + 500)
         turnos = 0
     }
@@ -134,14 +134,6 @@ function iteracionDeRandoms() {
         secuenciaPc.push(Math.floor(Math.random() * 4) + 1)
         return (secuenciaPc)
     }
-}
-
-function mostrarMensajeTurnoUser() {
-    let nodoMensaje = $form.mensaje
-    setTimeout(function () {
-        nodoMensaje.value = 'Es tu turno!'
-    }, 500)
-    permiteClickear()
 }
 
 function asignarPuntajeMaximo() {
@@ -182,11 +174,10 @@ function turnoJugador(num) {
     permiteClickear()
     let nodoPuntaje = $form.puntaje
     let puntaje = Number(nodoPuntaje.value)
-    let nodoMensaje = $form.mensaje
 
     if (num == secuenciaPc[turnos]) {
         if (turnos === secuenciaPc.length - 1) {
-            nodoMensaje.value = 'Correcto!'
+            actualizarMensaje('Correcto!')
             nodoPuntaje.value = puntaje + 1
             playCorrect()
             turnoPc()
@@ -198,7 +189,7 @@ function turnoJugador(num) {
 
     if (num != secuenciaPc[turnos]) {
         noPermiteClickear()
-        nodoMensaje.value = 'Incorrecto! Vuelve a empezar'
+        actualizarMensaje('Incorrecto! Vuelve a empezar')
         playWrong()
         gameOver()
         asignarPuntajeMaximo()
@@ -213,7 +204,7 @@ $form.start.onclick = function () {
     puntaje.value = 0
     secuenciaPc = []
     turnos = 0
-    mostrarMensajeSuerte()
+    actualizarMensaje('Suerte!')
     turnoPc()
 }
 
