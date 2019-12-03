@@ -3,6 +3,7 @@ let secuenciaPc = []
 let secuenciaUser = []
 let turnoUser = false
 let turnos = 0
+let ronda = 0
 
 function play1() {
     let sonidoUno = document.querySelector("#audio-uno")
@@ -56,9 +57,15 @@ function noPermiteClickear() {
     }
 }
 
+function actualizarNumeroRonda(ronda) {
+    document.querySelector('#ronda').textContent = ronda;
+}
+
 function turnoPc() {
     noPermiteClickear()
     setTimeout(function () {
+        ronda++
+        actualizarNumeroRonda(ronda)
         actualizarMensaje('Es el turno de la computadora...')
     }, 900)
     setTimeout(function () {
@@ -80,6 +87,7 @@ function eligeRandom() {
 
     for (let i = 0; i < numerosRandoms.length; i++) {
         let tiempo = ((i + 1) * 900)
+        const RETRASO_TURNO_JUGADOR = (numerosRandoms.length + 1) * 800;
 
         if (numerosRandoms[i] === eligeRojo) {
             setTimeout(function () {
@@ -122,11 +130,15 @@ function eligeRandom() {
         }
 
         setTimeout(function () {
-            actualizarMensaje('Es tu turno!')
-            permiteClickear()
-        }, tiempo + 500)
+            turnoUsuario()
+        }, RETRASO_TURNO_JUGADOR)
         turnos = 0
     }
+}
+
+function turnoUsuario() {
+    permiteClickear()
+    actualizarMensaje('Es tu turno!')
 }
 
 function iteracionDeRandoms() {
@@ -201,9 +213,11 @@ $form.start.onclick = function () {
     playStart()
     gameStart()
     noPermiteClickear()
+    actualizarNumeroRonda('-');
     puntaje.value = 0
     secuenciaPc = []
     turnos = 0
+    ronda = 0
     actualizarMensaje('Suerte!')
     turnoPc()
 }
