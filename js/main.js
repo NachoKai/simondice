@@ -214,7 +214,7 @@ $form.querySelector("#rojo").onclick = function (event) {
         turnoJugador(1)
         event.preventDefault()
     } else {
-        return ''
+        return function () {};
     }
 }
 
@@ -224,7 +224,7 @@ $form.querySelector("#verde").onclick = function (event) {
         turnoJugador(2)
         event.preventDefault()
     } else {
-        return ''
+        return function () {};
     }
 }
 
@@ -234,7 +234,7 @@ $form.querySelector("#azul").onclick = function (event) {
         turnoJugador(3)
         event.preventDefault()
     } else {
-        return ''
+        return function () {};
     }
 }
 
@@ -244,6 +244,6 @@ $form.querySelector("#amarillo").onclick = function (event) {
         turnoJugador(4)
         event.preventDefault()
     } else {
-        return ''
+        return function () {};
     }
 }
