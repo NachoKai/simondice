@@ -108,12 +108,6 @@ body {
   padding: 5px;
   width: 100%;
 }
-.reiniciar {
-  grid-area: reiniciar;
-}
-.continuar {
-  grid-area: continuar;
-}
 .sector4 {
   background-color: #fff;
   color: #000;
@@ -137,12 +131,6 @@ body {
   grid-area: mensaje;
   justify-content: center;
   text-align: center;
-}
-.mensajeWin {
-  background: #00ff6a;
-}
-.mensajeLose {
-  background: red;
 }
 footer {
   align-content: center;
@@ -195,7 +183,7 @@ input {
   text-shadow: 0 0 0 #2196f3;
 }
 input:focus {
-  outline: none;
+  outline: 0;
 }
 .button:active {
   height: 36px;
@@ -278,6 +266,117 @@ input:focus {
   outline: 0;
   width: 96%;
 }
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+#amarillo,
+#azul,
+#rojo,
+#verde {
+  width: 15vw;
+}
+#pmaximo,
+#puntaje {
+  background: #fff;
+  border: none;
+  font-size: 25px;
+  padding-bottom: 10px;
+  text-align: left;
+  width: 70px;
+}
+.boton-amarillo:hover,
+.boton-azul:hover,
+.boton-rojo:hover,
+.boton-verde:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
+}
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .colores {
+    min-height: 250px;
+  }
+  #amarillo,
+  #azul,
+  #rojo,
+  #verde {
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .colores {
+    min-height: 300px;
+  }
+  #amarillo,
+  #azul,
+  #rojo,
+  #verde {
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .colores {
+    min-height: 350px;
+  }
+  #amarillo,
+  #azul,
+  #rojo,
+  #verde {
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .colores {
+    min-height: 400px;
+  }
+  #amarillo,
+  #azul,
+  #rojo,
+  #verde {
+    width: 25vw;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #mensaje,
+  #pmaximo,
+  #puntaje,
+  .link,
+  .link:hover,
+  .mensaje,
+  .puntaje,
+  .sector1,
+  .sector2,
+  .sector4,
+  .start,
+  body {
+    background: #000;
+    color: #fff;
+  }
+}
+@media (prefers-color-scheme: light) {
+  #mensaje,
+  #pmaximo,
+  #puntaje,
+  .link,
+  .link:hover,
+  .mensaje,
+  .puntaje,
+  .sector1,
+  .sector2,
+  .sector4,
+  .start,
+  body {
+    background: #fff;
+    color: #000;
+  }
+}
 .rojoActivado {
   align-self: center;
   background: #ff636b;
@@ -312,121 +411,4 @@ input:focus {
   position: relative;
   width: 110%;
   z-index: 99;
-}
-::-webkit-scrollbar {
-  width: 15px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-#rojo,
-#verde,
-#azul,
-#amarillo {
-  width: 15vw;
-}
-#puntaje,
-#pmaximo {
-  background: #fff;
-  border: none;
-  font-size: 25px;
-  padding-bottom: 10px;
-  text-align: left;
-  width: 70px;
-}
-.boton-rojo:hover,
-.boton-verde:hover,
-.boton-azul:hover,
-.boton-amarillo:hover {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
-}
-@media screen and (min-width: 0px) and (max-width: 320px) {
-  .colores {
-    min-height: 250px;
-  }
-  #rojo,
-  #verde,
-  #azul,
-  #amarillo {
-    width: 80vw;
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .colores {
-    min-height: 300px;
-  }
-  #rojo,
-  #verde,
-  #azul,
-  #amarillo {
-    width: 40vw;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  .colores {
-    min-height: 350px;
-  }
-  #rojo,
-  #verde,
-  #azul,
-  #amarillo {
-    width: 30vw;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1000px) {
-  .colores {
-    min-height: 400px;
-  }
-  #rojo,
-  #verde,
-  #azul,
-  #amarillo {
-    width: 25vw;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  body,
-  .sector1,
-  .sector2,
-  .sector4,
-  .puntaje,
-  .mensaje,
-  #mensaje,
-  .start,
-  .puntaje,
-  .mensaje,
-  #mensaje,
-  #puntaje,
-  #pmaximo,
-  .link,
-  .link:hover {
-    background: #000;
-    color: #fff;
-  }
-}
-@media (prefers-color-scheme: light) {
-  body,
-  .sector1,
-  .sector2,
-  .sector4,
-  .puntaje,
-  .mensaje,
-  #mensaje,
-  .start,
-  .puntaje,
-  .mensaje,
-  #mensaje,
-  #puntaje,
-  #pmaximo,
-  .link,
-  .link:hover {
-    background: #fff;
-    color: #000;
-  }
 }
