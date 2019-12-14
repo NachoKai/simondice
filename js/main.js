@@ -201,9 +201,10 @@ function turnoJugador(num) {
 
     if (num != secuenciaPc[turnos]) {
         noPermiteClickear()
-        actualizarMensaje('Incorrecto! Vuelve a empezar')
-        playWrong()
         gameOver()
+        playWrong()
+        actualizarMensaje('Vuelve a empezar...')
+        failed()
         asignarPuntajeMaximo()
         return ''
     }
@@ -260,4 +261,14 @@ $form.querySelector("#amarillo").onclick = function (event) {
     } else {
         return function () {};
     }
+}
+
+function failed() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Incorrecto!',
+        allowOutsideClick: true,
+        allowEscapeKey: true,
+        showConfirmButton: true,
+    })
 }
