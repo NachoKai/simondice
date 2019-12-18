@@ -176,7 +176,7 @@ footer {
 }
 
 #start {
-  line-height: 105%
+  line-height: 50%
 }
 
 #start:active {
@@ -184,6 +184,7 @@ footer {
 }
 
 .button {
+  font-size: 40px;
   align-self: center;
   background: #dd8736;
   border: none;
@@ -193,10 +194,8 @@ footer {
   cursor: pointer;
   display: inline-block;
   height: 40px;
-  margin-bottom: 2rem;
   padding: .5rem 1.5rem;
   text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, .2)
 }
 
 input {
