@@ -281,6 +281,12 @@ footer {
   height: 44px;
 }
 
+.title {
+  padding: 4px;
+  max-width: 100%;
+  max-height: 70px;
+}
+
 .button {
   font-size: 35px;
   -ms-flex-item-align: center;
