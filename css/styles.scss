@@ -1,17 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+
 * {
   -webkit-box-sizing: border-box;
   -webkit-transition: all .3s ease;
   box-sizing: border-box;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
+  font-family: "VT323", monospace;
+  font-weight: lighter;
+  font-size: 24px;
   margin: 0;
   padding: 0;
   text-align: center;
-  transition: all .1s ease
+  transition: all .1s ease;
+  user-select: none;
+  outline: 0;
 }
 
-body {
-  background: #fff
+html {
+  background-color: #000;
+  color: #fff;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 .grid-container {
@@ -28,8 +38,8 @@ body {
 
 .sector1 {
   align-items: baseline;
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   display: flex;
   flex-flow: row wrap;
   grid-area: sector1;
@@ -54,20 +64,17 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  font-weight: 700;
   grid-area: puntaje;
   justify-content: center
 }
 
 .start {
-  font-weight: 700;
   grid-area: start;
   text-align: center
 }
 
 .pmaximo {
   align-items: baseline;
-  font-weight: 700;
   grid-area: pmaximo;
   text-align: center
 }
@@ -83,8 +90,8 @@ body {
 }
 
 .sector2 {
-  background-color: #fff;
   display: grid;
+  background-color: #fff;
   grid-area: sector2;
   grid-template-areas: "rojo verde""azul amarillo";
   grid-template-columns: 1fr 1fr;
@@ -125,8 +132,8 @@ body {
 }
 
 .sector4 {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -140,17 +147,19 @@ body {
 
 .mensaje {
   align-items: center;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   display: flex;
   flex-wrap: wrap;
-  font-size: 20px;
-  font-weight: 700;
   grid-area: mensaje;
   justify-content: center;
   text-align: center
 }
 
 footer {
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
   align-content: center;
   bottom: 0;
   height: 18px;
@@ -162,26 +171,16 @@ footer {
 }
 
 .link {
-  font-size: 15px
-}
-
-.link:active {
-  font-size: 14px;
-  outline: 0
+  font-size: 18px;
+  text-decoration: none;
 }
 
 #start {
-  font-size: 25px;
   line-height: 105%
 }
 
 #start:active {
   height: 44px;
-  outline: 0
-}
-
-.button:focus {
-  outline: 0
 }
 
 .button {
@@ -193,10 +192,7 @@ footer {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 15px;
-  font-weight: 700;
   height: 40px;
-  line-height: 150%;
   margin-bottom: 2rem;
   padding: .5rem 1.5rem;
   text-align: center;
@@ -204,8 +200,8 @@ footer {
 }
 
 input {
-  color: transparent;
-  text-shadow: 0 0 0 #2196f3
+  background-color: #000;
+  color: #fff;
 }
 
 input:focus {
@@ -218,16 +214,16 @@ input:focus {
 }
 
 .button:hover {
+  cursor: pointer;
   background: #e07006;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .726)
 }
 
 #mensaje {
   align-items: center;
-  background: #fff;
+  background-color: #000;
+  color: #fff;
   border: none;
-  color: #000;
-  font-size: 20px;
   justify-content: center;
   text-align: center;
   width: 280px
@@ -329,9 +325,9 @@ input:focus {
 
 #pmaximo,
 #puntaje {
-  background: #fff;
+  background-color: #000;
+  color: #fff;
   border: none;
-  font-size: 25px;
   padding-bottom: 10px;
   text-align: left;
   width: 70px
@@ -396,43 +392,6 @@ input:focus {
   }
 }
 
-@media (prefers-color-scheme:dark) {
-
-  #mensaje,
-  #pmaximo,
-  #puntaje,
-  .link,
-  .link:hover,
-  .mensaje,
-  .puntaje,
-  .sector1,
-  .sector2,
-  .sector4,
-  .start,
-  body {
-    background: #000;
-    color: #fff
-  }
-}
-
-@media (prefers-color-scheme:light) {
-
-  #mensaje,
-  #pmaximo,
-  #puntaje,
-  .link,
-  .link:hover,
-  .mensaje,
-  .puntaje,
-  .sector1,
-  .sector2,
-  .sector4,
-  .start,
-  body {
-    background: #fff;
-    color: #000
-  }
-}
 
 .rojoActivado {
   align-self: center;
