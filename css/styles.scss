@@ -18,6 +18,8 @@
 html {
   background-color: #000;
   color: #fff;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a:hover {
@@ -59,18 +61,8 @@ a:hover {
   padding-right: 10px
 }
 
-.puntaje {
-  align-items: baseline;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  grid-area: puntaje;
-  justify-content: center
-}
-
 .start {
   grid-area: start;
-  text-align: center
 }
 
 .pmaximo {
@@ -179,53 +171,13 @@ footer {
   color: #fff;
 }
 
-#start {
-  line-height: 50%
-}
-
-#start:active {
-  height: 44px;
-}
-
-.title {
-  padding: 4px;
-  max-width: 100%;
-  max-height: 70px
-}
-
-.button {
-  font-size: 35px;
-  align-self: center;
-  background: #dd8736;
-  border: none;
-  border-radius: 4px;
-  box-shadow: none;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  height: 40px;
-  padding: .5rem 1.5rem;
-  text-align: center;
-}
-
-input {
-  background-color: #000;
-  color: #fff;
-}
-
-input:focus {
-  outline: 0
-}
-
-.button:active {
-  height: 36px;
-  outline: 0
-}
-
-.button:hover {
-  cursor: pointer;
-  background: #e07006;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, .726)
+.puntaje {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  grid-area: puntaje;
+  justify-content: center
 }
 
 #mensaje {
@@ -251,7 +203,6 @@ input:focus {
 .boton-rojo:active {
   background: #d31721;
   height: 96%;
-  outline: 0;
   width: 96%
 }
 
@@ -269,7 +220,6 @@ input:focus {
 .boton-verde:active {
   background: #1ca144;
   height: 96%;
-  outline: 0;
   width: 96%
 }
 
@@ -287,7 +237,6 @@ input:focus {
 .boton-azul:active {
   background: #0094d3;
   height: 96%;
-  outline: 0;
   width: 96%
 }
 
@@ -305,7 +254,6 @@ input:focus {
 .boton-amarillo:active {
   background: #e6da00;
   height: 96%;
-  outline: 0;
   width: 96%
 }
 
@@ -439,4 +387,53 @@ input:focus {
   position: relative;
   width: 110%;
   z-index: 99;
+}
+
+#start {
+  padding: 10px;
+  text-align: center;
+  line-height: 50%;
+}
+
+#start:active {
+  height: 44px;
+}
+
+input {
+  background-color: #000;
+  color: #fff;
+}
+
+.button {
+  font-size: 32px;
+  max-width: 100px;
+  background: #dd8736;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button:active {
+  height: 36px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #e07006;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .726)
+}
+
+.title {
+  padding: 4px;
+  max-width: 100%;
+  max-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
