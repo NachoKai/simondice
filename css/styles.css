@@ -316,7 +316,7 @@ footer {
 }
 .rojoActivado {
   align-self: center;
-  background: #ff636b;
+  background: #ff7e84;
   height: 110%;
   position: relative;
   width: 110%;
@@ -324,7 +324,7 @@ footer {
 }
 .verdeActivado {
   align-self: center;
-  background: #6be28f;
+  background: #8bffae;
   height: 110%;
   line-height: 150%;
   position: relative;
@@ -333,7 +333,7 @@ footer {
 }
 .azulActivado {
   align-self: center;
-  background: #5fc8f5;
+  background: #85daff;
   height: 110%;
   line-height: 150%;
   position: relative;
@@ -342,7 +342,7 @@ footer {
 }
 .amarilloActivado {
   align-self: center;
-  background: #fff764;
+  background: #fffa92;
   height: 110%;
   line-height: 150%;
   position: relative;
