@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
 * {
   -webkit-box-sizing: border-box;
-  -webkit-transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
   box-sizing: border-box;
   font-family: "VT323", monospace;
   font-weight: lighter;
@@ -9,8 +9,8 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  -webkit-transition: all .1s ease;
-  transition: all .1s ease;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -65,6 +65,7 @@ a:hover {
 }
 
 .sector1 {
+  text-align: center;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -101,6 +102,7 @@ a:hover {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: start;
+  padding: 5px;
 }
 
 .pmaximo {
@@ -205,6 +207,8 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 550px;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -239,6 +243,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  padding: 5px;
 }
 
 footer {
@@ -285,9 +290,10 @@ footer {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: puntaje;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  max-width: 550px;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #mensaje {
@@ -566,5 +572,9 @@ input {
   max-height: 60px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

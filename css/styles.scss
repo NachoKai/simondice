@@ -2,7 +2,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-  -webkit-transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
   box-sizing: border-box;
   font-family: "VT323", monospace;
   font-weight: lighter;
@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  transition: all .1s ease;
+  transition: all 0.1s ease;
   user-select: none;
   outline: 0;
 }
@@ -41,10 +41,11 @@ a:hover {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   height: calc(100vh - 20px);
-  justify-content: space-evenly
+  justify-content: space-evenly;
 }
 
 .sector1 {
+  text-align: center;
   align-items: baseline;
   background-color: #000;
   color: #fff;
@@ -56,25 +57,26 @@ a:hover {
   grid-template-rows: 1fr;
   justify-content: space-around;
   padding: 5px;
-  width: 100%
+  width: 100%;
 }
 
 #plabel {
-  padding-right: 10px
+  padding-right: 10px;
 }
 
 #pmlabel {
-  padding-right: 10px
+  padding-right: 10px;
 }
 
 .start {
   grid-area: start;
+  padding: 5px;
 }
 
 .pmaximo {
   align-items: baseline;
   grid-area: pmaximo;
-  text-align: center
+  text-align: center;
 }
 
 .colores {
@@ -84,35 +86,35 @@ a:hover {
   justify-content: center;
   min-height: 450px;
   position: relative;
-  text-align: center
+  text-align: center;
 }
 
 .sector2 {
   display: grid;
   background-color: #fff;
   grid-area: sector2;
-  grid-template-areas: "rojo verde""azul amarillo";
+  grid-template-areas: "rojo verde" "azul amarillo";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: 100%;
   justify-content: center;
-  padding: 5px
+  padding: 5px;
 }
 
 .rojo {
-  grid-area: rojo
+  grid-area: rojo;
 }
 
 .verde {
-  grid-area: verde
+  grid-area: verde;
 }
 
 .azul {
-  grid-area: azul
+  grid-area: azul;
 }
 
 .amarillo {
-  grid-area: amarillo
+  grid-area: amarillo;
 }
 
 .sector3 {
@@ -126,13 +128,15 @@ a:hover {
   grid-template-rows: 1fr;
   justify-content: space-around;
   padding: 5px;
-  width: 100%
+  width: 100%;
 }
 
 .sector4 {
   background-color: #000;
   color: #fff;
   display: flex;
+  max-width: 550px;
+  width: 100%;
   flex-direction: column;
   flex-wrap: wrap;
   grid-area: sector4;
@@ -140,7 +144,7 @@ a:hover {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   justify-content: center;
-  padding: 5px
+  padding: 5px;
 }
 
 .mensaje {
@@ -151,7 +155,8 @@ a:hover {
   flex-wrap: wrap;
   grid-area: mensaje;
   justify-content: center;
-  text-align: center
+  text-align: center;
+  padding: 5px;
 }
 
 footer {
@@ -165,7 +170,7 @@ footer {
   justify-content: center;
   position: relative;
   text-align: center;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .link {
@@ -183,7 +188,9 @@ footer {
   flex-direction: row;
   flex-wrap: nowrap;
   grid-area: puntaje;
-  justify-content: center
+  max-width: 550px;
+  width: 100%;
+  justify-content: space-around;
 }
 
 #mensaje {
@@ -193,7 +200,7 @@ footer {
   border: none;
   justify-content: center;
   text-align: center;
-  width: 280px
+  width: 280px;
 }
 
 .boton-rojo {
@@ -203,13 +210,13 @@ footer {
   box-shadow: none;
   cursor: pointer;
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 
 .boton-rojo:active {
   background: #d31721;
   height: 96%;
-  width: 96%
+  width: 96%;
 }
 
 .boton-verde {
@@ -220,13 +227,13 @@ footer {
   cursor: pointer;
   height: 100%;
   line-height: 150%;
-  width: 100%
+  width: 100%;
 }
 
 .boton-verde:active {
   background: #1ca144;
   height: 96%;
-  width: 96%
+  width: 96%;
 }
 
 .boton-azul {
@@ -237,13 +244,13 @@ footer {
   cursor: pointer;
   height: 100%;
   line-height: 150%;
-  width: 100%
+  width: 100%;
 }
 
 .boton-azul:active {
   background: #0094d3;
   height: 96%;
-  width: 96%
+  width: 96%;
 }
 
 .boton-amarillo {
@@ -254,36 +261,36 @@ footer {
   cursor: pointer;
   height: 100%;
   line-height: 150%;
-  width: 100%
+  width: 100%;
 }
 
 .boton-amarillo:active {
   background: #e6da00;
   height: 96%;
-  width: 96%
+  width: 96%;
 }
 
 ::-webkit-scrollbar {
-  width: 15px
+  width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888
+  background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555
+  background: #555;
 }
 
 #amarillo,
 #azul,
 #rojo,
 #verde {
-  width: 15vw
+  width: 15vw;
 }
 
 #pmaximo,
@@ -293,68 +300,67 @@ footer {
   border: none;
   padding-bottom: 10px;
   text-align: left;
-  width: 70px
+  width: 70px;
 }
 
 .boton-amarillo:hover,
 .boton-azul:hover,
 .boton-rojo:hover,
 .boton-verde:hover {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, .726)
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
 }
 
-@media screen and (min-width:0px) and (max-width:320px) {
+@media screen and (min-width: 0px) and (max-width: 320px) {
   .colores {
-    min-height: 250px
+    min-height: 250px;
   }
 
   #amarillo,
   #azul,
   #rojo,
   #verde {
-    width: 80vw
+    width: 80vw;
   }
 }
 
-@media screen and (min-width:320px) and (max-width:480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .colores {
-    min-height: 300px
+    min-height: 300px;
   }
 
   #amarillo,
   #azul,
   #rojo,
   #verde {
-    width: 40vw
+    width: 40vw;
   }
 }
 
-@media screen and (min-width:480px) and (max-width:768px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .colores {
-    min-height: 350px
+    min-height: 350px;
   }
 
   #amarillo,
   #azul,
   #rojo,
   #verde {
-    width: 30vw
+    width: 30vw;
   }
 }
 
-@media screen and (min-width:768px) and (max-width:1000px) {
+@media screen and (min-width: 768px) and (max-width: 1000px) {
   .colores {
-    min-height: 400px
+    min-height: 400px;
   }
 
   #amarillo,
   #azul,
   #rojo,
   #verde {
-    width: 25vw
+    width: 25vw;
   }
 }
-
 
 .rojoActivado {
   align-self: center;
@@ -432,7 +438,7 @@ input {
 .button:hover {
   cursor: pointer;
   background: #e07006;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, .726)
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
 }
 
 .title {
@@ -442,4 +448,8 @@ input {
   max-height: 60px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hidden{
+  display: none;
 }

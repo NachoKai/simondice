@@ -206,6 +206,7 @@ function turnoJugador(num) {
         actualizarMensaje('Vuelve a empezar...')
         failed()
         asignarPuntajeMaximo()
+        mostrarBotonStart()
         return ''
     }
 }
@@ -220,6 +221,7 @@ $form.start.onclick = function () {
     turnos = 0
     ronda = 0
     actualizarMensaje('Suerte!')
+    ocultarBotonStart()
     turnoPc()
 }
 
@@ -229,7 +231,7 @@ $form.querySelector("#rojo").onclick = function (event) {
         turnoJugador(1)
         event.preventDefault()
     } else {
-        return function () {};
+        return function () { };
     }
 }
 
@@ -239,7 +241,7 @@ $form.querySelector("#verde").onclick = function (event) {
         turnoJugador(2)
         event.preventDefault()
     } else {
-        return function () {};
+        return function () { };
     }
 }
 
@@ -249,7 +251,7 @@ $form.querySelector("#azul").onclick = function (event) {
         turnoJugador(3)
         event.preventDefault()
     } else {
-        return function () {};
+        return function () { };
     }
 }
 
@@ -259,7 +261,7 @@ $form.querySelector("#amarillo").onclick = function (event) {
         turnoJugador(4)
         event.preventDefault()
     } else {
-        return function () {};
+        return function () { };
     }
 }
 
@@ -271,4 +273,12 @@ function failed() {
         allowEscapeKey: true,
         showConfirmButton: true,
     })
+}
+
+function ocultarBotonStart() {
+    start.className = 'hidden'
+}
+
+function mostrarBotonStart() {
+    start.className = 'button'
 }
