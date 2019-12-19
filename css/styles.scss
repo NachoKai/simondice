@@ -60,14 +60,6 @@ a:hover {
   width: 100%;
 }
 
-#plabel {
-  padding-right: 10px;
-}
-
-#pmlabel {
-  padding-right: 10px;
-}
-
 .start {
   grid-area: start;
   padding: 5px;
@@ -300,7 +292,7 @@ footer {
   border: none;
   padding-bottom: 10px;
   text-align: center;
-  width: 70px;
+  max-width: 40px;
 }
 
 .boton-amarillo:hover,
