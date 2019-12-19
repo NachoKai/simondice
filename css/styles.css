@@ -9,246 +9,401 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   outline: 0;
 }
+
 #form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 html {
   background-color: #000;
   color: #fff;
   margin-left: auto;
   margin-right: auto;
 }
+
 a:hover {
   cursor: pointer;
 }
+
 .grid-container {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  grid-template-areas: sector1 sector2 sector3 sector4;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      grid-template-areas: sector1 sector2 sector3 sector4;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   height: calc(100vh - 20px);
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 .sector1 {
   text-align: center;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   background-color: #000;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   grid-area: sector1;
-  grid-template-areas: "puntaje start pmaximo";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-content: space-around;
+      grid-template-areas: "puntaje start pmaximo";
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 5px;
   width: 100%;
 }
+
 .start {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: start;
   padding: 5px;
 }
+
 .pmaximo {
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: pmaximo;
   text-align: center;
 }
+
 .colores {
-  align-content: center;
-  align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 450px;
   position: relative;
   text-align: center;
 }
+
 .sector2 {
+  display: -ms-grid;
   display: grid;
   background-color: #fff;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: sector2;
-  grid-template-areas: "rojo verde" "azul amarillo";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+      grid-template-areas: "rojo verde" "azul amarillo";
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   height: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
 }
+
 .rojo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: rojo;
 }
+
 .verde {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: verde;
 }
+
 .azul {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: azul;
 }
+
 .amarillo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: amarillo;
 }
+
 .sector3 {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: sector3;
-  grid-template-areas: "reiniciar continuar";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-content: space-around;
+      grid-template-areas: "reiniciar continuar";
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 5px;
   width: 100%;
 }
+
 .sector4 {
   background-color: #000;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 550px;
   width: 100%;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   grid-area: sector4;
-  grid-template-areas: mensaje;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  justify-content: center;
+      grid-template-areas: mensaje;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
 }
+
 .mensaje {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #000;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   grid-area: mensaje;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   padding: 5px;
 }
+
 footer {
   background-color: #000;
   color: #fff;
   font-size: 18px;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   bottom: 0;
   height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   text-align: center;
   text-decoration: none;
 }
+
 .link {
   font-size: 18px;
   text-decoration: none;
 }
+
 .link:visited {
   color: #fff;
 }
+
 .puntaje {
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: puntaje;
   max-width: 550px;
   width: 100%;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 #mensaje {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #000;
   color: #fff;
   border: none;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   width: 280px;
 }
+
 .boton-rojo {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #ed1b24;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
   height: 100%;
   width: 100%;
 }
+
 .boton-rojo:active {
   background: #d31721;
   height: 96%;
   width: 96%;
 }
+
 .boton-verde {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #23b14d;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
   height: 100%;
   line-height: 150%;
   width: 100%;
 }
+
 .boton-verde:active {
   background: #1ca144;
   height: 96%;
   width: 96%;
 }
+
 .boton-azul {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #00a3e8;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
   height: 100%;
   line-height: 150%;
   width: 100%;
 }
+
 .boton-azul:active {
   background: #0094d3;
   height: 96%;
   width: 96%;
 }
+
 .boton-amarillo {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #fef200;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
   height: 100%;
   line-height: 150%;
   width: 100%;
 }
+
 .boton-amarillo:active {
   background: #e6da00;
   height: 96%;
   width: 96%;
 }
+
 ::-webkit-scrollbar {
   width: 15px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
 #amarillo,
 #azul,
 #rojo,
 #verde {
   width: 15vw;
 }
+
 #pmaximo,
 #puntaje {
   background-color: #000;
@@ -258,12 +413,14 @@ footer {
   text-align: center;
   max-width: 40px;
 }
+
 .boton-amarillo:hover,
 .boton-azul:hover,
 .boton-rojo:hover,
 .boton-verde:hover {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
 }
+
 @media screen and (min-width: 0px) and (max-width: 320px) {
   .colores {
     min-height: 250px;
@@ -275,6 +432,7 @@ footer {
     width: 80vw;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .colores {
     min-height: 300px;
@@ -286,6 +444,7 @@ footer {
     width: 40vw;
   }
 }
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .colores {
     min-height: 350px;
@@ -297,6 +456,7 @@ footer {
     width: 30vw;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .colores {
     min-height: 400px;
@@ -308,16 +468,22 @@ footer {
     width: 25vw;
   }
 }
+
 .rojoActivado {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #ff7e84;
   height: 110%;
   position: relative;
   width: 110%;
   z-index: 99;
 }
+
 .verdeActivado {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #8bffae;
   height: 110%;
   line-height: 150%;
@@ -325,8 +491,11 @@ footer {
   width: 110%;
   z-index: 99;
 }
+
 .azulActivado {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #85daff;
   height: 110%;
   line-height: 150%;
@@ -334,8 +503,11 @@ footer {
   width: 110%;
   z-index: 99;
 }
+
 .amarilloActivado {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #fffa92;
   height: 110%;
   line-height: 150%;
@@ -343,41 +515,49 @@ footer {
   width: 110%;
   z-index: 99;
 }
+
 #start {
   padding: 10px;
   text-align: center;
   line-height: 50%;
 }
+
 #start:active {
   height: 44px;
 }
+
 input {
   background-color: #000;
   color: #fff;
   text-align: center;
 }
+
 .button {
   font-size: 32px;
   max-width: 100px;
   background: #dd8736;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  height: 40px;
+  height: 35px;
   padding: 5px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .button:active {
   height: 36px;
 }
+
 .button:hover {
   cursor: pointer;
   background: #e07006;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.726);
 }
+
 .title {
   padding: 5px;
   margin: 5px;
@@ -386,6 +566,8 @@ input {
   margin-left: auto;
   margin-right: auto;
 }
+
 .hidden {
   display: none;
 }
+/*# sourceMappingURL=styles.css.map */
