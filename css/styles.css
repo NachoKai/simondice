@@ -568,6 +568,6 @@ input {
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
 }
 /*# sourceMappingURL=styles.css.map */
