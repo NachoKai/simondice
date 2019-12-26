@@ -1,9 +1,9 @@
 const $form = document.querySelector("#form")
-let secuenciaPc = []
-let secuenciaUser = []
-let turnoUser = false
-let turnos = 0
-let ronda = 0
+let secuenciaPc = [],
+    secuenciaUser = [],
+    turnoUser = false,
+    turnos = 0,
+    ronda = 0
 
 function play1() {
     let sonidoUno = document.querySelector("#audio-uno")
@@ -75,15 +75,15 @@ function turnoPc() {
 
 function eligeRandom() {
     noPermiteClickear()
-    let nodoRojo = $form.querySelector("#rojo")
-    let nodoVerde = $form.querySelector("#verde")
-    let nodoAzul = $form.querySelector("#azul")
-    let nodoAmarillo = $form.querySelector("#amarillo")
-    let eligeRojo = 1
-    let eligeVerde = 2
-    let eligeAzul = 3
-    let eligeAmarillo = 4
-    let numerosRandoms = iteracionDeRandoms()
+    let nodoRojo = $form.querySelector("#rojo"),
+        nodoVerde = $form.querySelector("#verde"),
+        nodoAzul = $form.querySelector("#azul"),
+        nodoAmarillo = $form.querySelector("#amarillo"),
+        eligeRojo = 1,
+        eligeVerde = 2,
+        eligeAzul = 3,
+        eligeAmarillo = 4,
+        numerosRandoms = iteracionDeRandoms()
 
     for (let i = 0; i < numerosRandoms.length; i++) {
         let tiempo = ((i + 1) * 900)
@@ -149,20 +149,20 @@ function iteracionDeRandoms() {
 }
 
 function asignarPuntajeMaximo() {
-    let nodoPMaximo = $form.pmaximo
-    let nodoPuntaje = $form.puntaje
-    let puntaje = Number(nodoPuntaje.value)
-    let pmaximo = Number(nodoPMaximo.value)
+    let nodoPMaximo = $form.pmaximo,
+        nodoPuntaje = $form.puntaje,
+        puntaje = Number(nodoPuntaje.value),
+        pmaximo = Number(nodoPMaximo.value)
     if (puntaje > pmaximo) {
         nodoPMaximo.value = puntaje
     }
 }
 
 function gameOver() {
-    let nodoRojo = $form.querySelector("#rojo")
-    let nodoVerde = $form.querySelector("#verde")
-    let nodoAzul = $form.querySelector("#azul")
-    let nodoAmarillo = $form.querySelector("#amarillo")
+    let nodoRojo = $form.querySelector("#rojo"),
+        nodoVerde = $form.querySelector("#verde"),
+        nodoAzul = $form.querySelector("#azul"),
+        nodoAmarillo = $form.querySelector("#amarillo")
 
     nodoRojo.className = ('rojoActivado')
     nodoVerde.className = ('verdeActivado')
@@ -171,10 +171,10 @@ function gameOver() {
 }
 
 function gameStart() {
-    let nodoRojo = $form.querySelector("#rojo")
-    let nodoVerde = $form.querySelector("#verde")
-    let nodoAzul = $form.querySelector("#azul")
-    let nodoAmarillo = $form.querySelector("#amarillo")
+    let nodoRojo = $form.querySelector("#rojo"),
+        nodoVerde = $form.querySelector("#verde"),
+        nodoAzul = $form.querySelector("#azul"),
+        nodoAmarillo = $form.querySelector("#amarillo")
 
     nodoRojo.className = ('boton-rojo')
     nodoVerde.className = ('boton-verde')
@@ -184,8 +184,8 @@ function gameStart() {
 
 function turnoJugador(num) {
     permiteClickear()
-    let nodoPuntaje = $form.puntaje
-    let puntaje = Number(nodoPuntaje.value)
+    let nodoPuntaje = $form.puntaje,
+        puntaje = Number(nodoPuntaje.value)
 
     if (num == secuenciaPc[turnos]) {
         if (turnos === secuenciaPc.length - 1) {
@@ -231,7 +231,7 @@ $form.querySelector("#rojo").onclick = function (event) {
         turnoJugador(1)
         event.preventDefault()
     } else {
-        return function () { };
+        return function () {};
     }
 }
 
@@ -241,7 +241,7 @@ $form.querySelector("#verde").onclick = function (event) {
         turnoJugador(2)
         event.preventDefault()
     } else {
-        return function () { };
+        return function () {};
     }
 }
 
@@ -251,7 +251,7 @@ $form.querySelector("#azul").onclick = function (event) {
         turnoJugador(3)
         event.preventDefault()
     } else {
-        return function () { };
+        return function () {};
     }
 }
 
@@ -261,7 +261,7 @@ $form.querySelector("#amarillo").onclick = function (event) {
         turnoJugador(4)
         event.preventDefault()
     } else {
-        return function () { };
+        return function () {};
     }
 }
 
