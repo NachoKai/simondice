@@ -282,3 +282,5 @@ function ocultarBotonStart() {
 function mostrarBotonStart() {
     start.className = 'button'
 }
+
+document.getElementById("current-year").innerHTML = new Date().getFullYear();
