@@ -3,47 +3,24 @@ let secuenciaPc = [],
     secuenciaUser = [],
     turnoUser = false,
     turnos = 0,
-    ronda = 0
+    ronda = 0,
+    sonidoUno = document.querySelector("#audio-uno"),
+    sonidoDos = document.querySelector("#audio-dos"),
+    sonidoTres = document.querySelector("#audio-tres"),
+    sonidoCuatro = document.querySelector("#audio-cuatro"),
+    sonidoStart = document.querySelector("#audio-start"),
+    sonidoCorrect = document.querySelector("#audio-correct"),
+    sonidoWrong = document.querySelector("#audio-wrong")
+const $mensaje = document.querySelector('#mensaje')
 
-function play1() {
-    let sonidoUno = document.querySelector("#audio-uno")
-    sonidoUno.play();
-}
-
-function play2() {
-    let sonidoDos = document.querySelector("#audio-dos")
-    sonidoDos.play();
-}
-
-function play3() {
-    let sonidoTres = document.querySelector("#audio-tres")
-    sonidoTres.play();
-}
-
-function play4() {
-    let sonidoCuatro = document.querySelector("#audio-cuatro")
-    sonidoCuatro.play();
-}
-
-function playStart() {
-    let sonidoStart = document.querySelector("#audio-start")
-    sonidoStart.play();
-}
-
-function playCorrect() {
-    let sonidoCorrect = document.querySelector("#audio-correct")
-    sonidoCorrect.play();
-}
-
-function playWrong() {
-    let sonidoWrong = document.querySelector("#audio-wrong")
-    sonidoWrong.play();
-}
-
-function actualizarMensaje(mensaje) {
-    const $mensaje = document.querySelector('#mensaje');
-    $mensaje.value = mensaje;
-}
+play1 = () => sonidoUno.play()
+play2 = () => sonidoDos.play()
+play3 = () => sonidoTres.play()
+play4 = () => sonidoCuatro.play()
+playStart = () => sonidoStart.play()
+playCorrect = () => sonidoCorrect.play()
+playWrong = () => sonidoWrong.play()
+actualizarMensaje = (mensaje) => $mensaje.value = mensaje
 
 function permiteClickear() {
     if (turnoUser === false) {
@@ -275,12 +252,7 @@ function failed() {
     })
 }
 
-function ocultarBotonStart() {
-    start.className = 'hidden'
-}
-
-function mostrarBotonStart() {
-    start.className = 'button'
-}
+ocultarBotonStart = () => start.className = 'hidden'
+mostrarBotonStart = () => start.className = 'button'
 
 document.getElementById("current-year").innerHTML = new Date().getFullYear();

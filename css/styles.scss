@@ -85,7 +85,7 @@ a:hover {
   display: grid;
   background-color: #fff;
   grid-area: sector2;
-  grid-template-areas: "rojo verde" "azul amarillo";
+  grid-template-areas: "rojo verde""azul amarillo";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: 100%;
@@ -444,5 +444,9 @@ input {
 }
 
 .hidden {
-  opacity:0;
+  opacity: 0;
+}
+
+#current-year {
+  font-size: 18px;
 }
