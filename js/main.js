@@ -13,13 +13,16 @@ let secuenciaPc = [],
     sonidoWrong = document.querySelector("#audio-wrong")
 const $mensaje = document.querySelector('#mensaje')
 
-play1 = () => sonidoUno.play()
-play2 = () => sonidoDos.play()
-play3 = () => sonidoTres.play()
-play4 = () => sonidoCuatro.play()
-playStart = () => sonidoStart.play()
-playCorrect = () => sonidoCorrect.play()
-playWrong = () => sonidoWrong.play()
+const SOUNDS = {
+    play1 : () => sonidoUno.play(),
+    play2 : () => sonidoDos.play(),
+    play3 : () => sonidoTres.play(),
+    play4 : () => sonidoCuatro.play(),
+    playStart : () => sonidoStart.play(),
+    playCorrect : () => sonidoCorrect.play(),
+    playWrong : () => sonidoWrong.play()
+}
+
 actualizarMensaje = (mensaje) => $mensaje.value = mensaje
 
 function permiteClickear() {
@@ -68,7 +71,7 @@ function eligeRandom() {
 
         if (numerosRandoms[i] === eligeRojo) {
             setTimeout(function () {
-                play1()
+                SOUNDS.play1()
                 nodoRojo.className = ('rojoActivado')
             }, tiempo)
             setTimeout(function () {
@@ -78,7 +81,7 @@ function eligeRandom() {
 
         if (numerosRandoms[i] === eligeVerde) {
             setTimeout(function () {
-                play2()
+                SOUNDS.play1()
                 nodoVerde.className = ('verdeActivado')
             }, tiempo)
             setTimeout(function () {
@@ -88,7 +91,7 @@ function eligeRandom() {
 
         if (numerosRandoms[i] === eligeAzul) {
             setTimeout(function () {
-                play3()
+                SOUNDS.play3()
                 nodoAzul.className = ('azulActivado')
             }, tiempo)
             setTimeout(function () {
@@ -98,7 +101,7 @@ function eligeRandom() {
 
         if (numerosRandoms[i] === eligeAmarillo) {
             setTimeout(function () {
-                play4()
+                SOUNDS.play4()
                 nodoAmarillo.className = ('amarilloActivado')
             }, tiempo)
             setTimeout(function () {
@@ -168,7 +171,7 @@ function turnoJugador(num) {
         if (turnos === secuenciaPc.length - 1) {
             actualizarMensaje('Correcto!')
             nodoPuntaje.value = puntaje + 1
-            playCorrect()
+            SOUNDS.playCorrect()
             turnoPc()
         } else {
             turnos++
@@ -179,7 +182,7 @@ function turnoJugador(num) {
     if (num != secuenciaPc[turnos]) {
         noPermiteClickear()
         gameOver()
-        playWrong()
+        SOUNDS.playWrong()
         actualizarMensaje('Vuelve a empezar...')
         failed()
         asignarPuntajeMaximo()
@@ -189,7 +192,7 @@ function turnoJugador(num) {
 }
 
 $form.start.onclick = function () {
-    playStart()
+    SOUNDS.playStart()
     gameStart()
     noPermiteClickear()
     actualizarNumeroRonda('-');
@@ -203,7 +206,7 @@ $form.start.onclick = function () {
 }
 
 $form.querySelector("#rojo").onclick = function (event) {
-    play1()
+    SOUNDS.play1()
     if (turnoUser === true) {
         turnoJugador(1)
         event.preventDefault()
@@ -213,7 +216,7 @@ $form.querySelector("#rojo").onclick = function (event) {
 }
 
 $form.querySelector("#verde").onclick = function (event) {
-    play2()
+    SOUNDS.play1()
     if (turnoUser === true) {
         turnoJugador(2)
         event.preventDefault()
@@ -223,7 +226,7 @@ $form.querySelector("#verde").onclick = function (event) {
 }
 
 $form.querySelector("#azul").onclick = function (event) {
-    play3()
+    SOUNDS.play3()
     if (turnoUser === true) {
         turnoJugador(3)
         event.preventDefault()
@@ -233,7 +236,7 @@ $form.querySelector("#azul").onclick = function (event) {
 }
 
 $form.querySelector("#amarillo").onclick = function (event) {
-    play4()
+    SOUNDS.play4()
     if (turnoUser === true) {
         turnoJugador(4)
         event.preventDefault()
