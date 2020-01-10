@@ -14,13 +14,13 @@ let secuenciaPc = [],
 const $mensaje = document.querySelector('#mensaje')
 
 const SOUNDS = {
-    play1 : () => sonidoUno.play(),
-    play2 : () => sonidoDos.play(),
-    play3 : () => sonidoTres.play(),
-    play4 : () => sonidoCuatro.play(),
-    playStart : () => sonidoStart.play(),
-    playCorrect : () => sonidoCorrect.play(),
-    playWrong : () => sonidoWrong.play()
+    play1: () => sonidoUno.play(),
+    play2: () => sonidoDos.play(),
+    play3: () => sonidoTres.play(),
+    play4: () => sonidoCuatro.play(),
+    playStart: () => sonidoStart.play(),
+    playCorrect: () => sonidoCorrect.play(),
+    playWrong: () => sonidoWrong.play()
 }
 
 actualizarMensaje = (mensaje) => $mensaje.value = mensaje
@@ -37,20 +37,16 @@ function noPermiteClickear() {
     }
 }
 
-function actualizarNumeroRonda(ronda) {
-    document.querySelector('#ronda').textContent = ronda;
-}
+let actualizarNumeroRonda = (ronda) => document.querySelector('#ronda').textContent = ronda
 
 function turnoPc() {
     noPermiteClickear()
-    setTimeout(function () {
+    setTimeout(() => {
         ronda++
         actualizarNumeroRonda(ronda)
         actualizarMensaje('Es el turno de la computadora...')
     }, 900)
-    setTimeout(function () {
-        eligeRandom()
-    }, 900)
+    setTimeout(() => eligeRandom(), 900)
 }
 
 function eligeRandom() {
@@ -70,46 +66,46 @@ function eligeRandom() {
         const RETRASO_TURNO_JUGADOR = (numerosRandoms.length + 1) * 800;
 
         if (numerosRandoms[i] === eligeRojo) {
-            setTimeout(function () {
+            setTimeout(() => {
                 SOUNDS.play1()
                 nodoRojo.className = ('rojoActivado')
             }, tiempo)
-            setTimeout(function () {
+            setTimeout(() => {
                 nodoRojo.className = ('boton-rojo')
             }, tiempo + 500)
         }
 
         if (numerosRandoms[i] === eligeVerde) {
-            setTimeout(function () {
+            setTimeout(() => {
                 SOUNDS.play1()
                 nodoVerde.className = ('verdeActivado')
             }, tiempo)
-            setTimeout(function () {
+            setTimeout(() => {
                 nodoVerde.className = ('boton-verde')
             }, tiempo + 500)
         }
 
         if (numerosRandoms[i] === eligeAzul) {
-            setTimeout(function () {
+            setTimeout(() => {
                 SOUNDS.play3()
                 nodoAzul.className = ('azulActivado')
             }, tiempo)
-            setTimeout(function () {
+            setTimeout(() => {
                 nodoAzul.className = ('boton-azul')
             }, tiempo + 500)
         }
 
         if (numerosRandoms[i] === eligeAmarillo) {
-            setTimeout(function () {
+            setTimeout(() => {
                 SOUNDS.play4()
                 nodoAmarillo.className = ('amarilloActivado')
             }, tiempo)
-            setTimeout(function () {
+            setTimeout(() => {
                 nodoAmarillo.className = ('boton-amarillo')
             }, tiempo + 500)
         }
 
-        setTimeout(function () {
+        setTimeout(() => {
             turnoUsuario()
         }, RETRASO_TURNO_JUGADOR)
         turnos = 0
@@ -191,7 +187,7 @@ function turnoJugador(num) {
     }
 }
 
-$form.start.onclick = function () {
+$form.start.onclick = () => {
     SOUNDS.playStart()
     gameStart()
     noPermiteClickear()
@@ -205,43 +201,43 @@ $form.start.onclick = function () {
     turnoPc()
 }
 
-$form.querySelector("#rojo").onclick = function (event) {
+$form.querySelector("#rojo").onclick = (event) => {
     SOUNDS.play1()
     if (turnoUser === true) {
         turnoJugador(1)
         event.preventDefault()
     } else {
-        return function () {};
+        return () => {};
     }
 }
 
-$form.querySelector("#verde").onclick = function (event) {
+$form.querySelector("#verde").onclick = (event) => {
     SOUNDS.play1()
     if (turnoUser === true) {
         turnoJugador(2)
         event.preventDefault()
     } else {
-        return function () {};
+        return () => {};
     }
 }
 
-$form.querySelector("#azul").onclick = function (event) {
+$form.querySelector("#azul").onclick = (event) => {
     SOUNDS.play3()
     if (turnoUser === true) {
         turnoJugador(3)
         event.preventDefault()
     } else {
-        return function () {};
+        return () => {};
     }
 }
 
-$form.querySelector("#amarillo").onclick = function (event) {
+$form.querySelector("#amarillo").onclick = (event) => {
     SOUNDS.play4()
     if (turnoUser === true) {
         turnoJugador(4)
         event.preventDefault()
     } else {
-        return function () {};
+        return () => {};
     }
 }
 
