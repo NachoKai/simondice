@@ -245,6 +245,7 @@ function failed() {
     Swal.fire({
         icon: 'error',
         title: 'Incorrecto!',
+        text: 'Intenta nuevamente, haz click en START.',
         allowOutsideClick: true,
         allowEscapeKey: true,
         showConfirmButton: true,
