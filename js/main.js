@@ -77,7 +77,7 @@ function eligeRandom() {
 
         if (numerosRandoms[i] === eligeVerde) {
             setTimeout(() => {
-                SOUNDS.play1()
+                SOUNDS.play2()
                 nodoVerde.className = ('verdeActivado')
             }, tiempo)
             setTimeout(() => {
@@ -212,7 +212,7 @@ $form.querySelector("#rojo").onclick = (event) => {
 }
 
 $form.querySelector("#verde").onclick = (event) => {
-    SOUNDS.play1()
+    SOUNDS.play2()
     if (turnoUser === true) {
         turnoJugador(2)
         event.preventDefault()
