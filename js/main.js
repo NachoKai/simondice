@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-undef */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-return-assign */
 const $form = document.querySelector('#form');
@@ -43,15 +45,17 @@ function noPermiteClickear() {
 const actualizarNumeroRonda = ronda =>
   (document.querySelector('#ronda').textContent = ronda);
 
-function turnoPc() {
-  noPermiteClickear();
-  setTimeout(() => {
-    let ronda;
-    ronda++;
-    actualizarNumeroRonda(ronda);
-    actualizarMensaje('Es el turno de la computadora...');
-  }, 900);
-  setTimeout(() => eligeRandom(), 900);
+function iteracionDeRandoms() {
+  for (let i = 0; i < 25; i++) {
+    secuenciaPc.push(Math.floor(Math.random() * 4) + 1);
+    return secuenciaPc;
+  }
+  return secuenciaPc;
+}
+
+function turnoUsuario() {
+  permiteClickear();
+  actualizarMensaje('Es tu turno!');
 }
 
 function eligeRandom() {
@@ -117,16 +121,15 @@ function eligeRandom() {
   }
 }
 
-function turnoUsuario() {
-  permiteClickear();
-  actualizarMensaje('Es tu turno!');
-}
-
-function iteracionDeRandoms() {
-  for (let i = 0; i < 25; i++) {
-    secuenciaPc.push(Math.floor(Math.random() * 4) + 1);
-    return secuenciaPc;
-  }
+function turnoPc() {
+  noPermiteClickear();
+  setTimeout(() => {
+    let ronda;
+    ronda++;
+    actualizarNumeroRonda(ronda);
+    actualizarMensaje('Es el turno de la computadora...');
+  }, 900);
+  setTimeout(() => eligeRandom(), 900);
 }
 
 function asignarPuntajeMaximo() {
@@ -163,6 +166,17 @@ function gameStart() {
   nodoAmarillo.className = 'boton-amarillo';
 }
 
+function failed() {
+  Swal.fire({
+    icon: 'error',
+    title: 'Incorrecto!',
+    text: 'Intenta nuevamente, haz click en START.',
+    allowOutsideClick: true,
+    allowEscapeKey: true,
+    showConfirmButton: true
+  });
+}
+
 function turnoJugador(num) {
   permiteClickear();
   const nodoPuntaje = $form.puntaje;
@@ -180,7 +194,7 @@ function turnoJugador(num) {
     }
   }
 
-  if (num != secuenciaPc[turnos]) {
+  if (num !== secuenciaPc[turnos]) {
     noPermiteClickear();
     gameOver();
     SOUNDS.playWrong();
@@ -246,22 +260,10 @@ $form.querySelector('#amarillo').onclick = event => {
   }
 };
 
-function failed() {
-  Swal.fire({
-    icon: 'error',
-    title: 'Incorrecto!',
-    text: 'Intenta nuevamente, haz click en START.',
-    allowOutsideClick: true,
-    allowEscapeKey: true,
-    showConfirmButton: true
-  });
-}
-
 ocultarBotonStart = () => {
   start.className = 'hidden';
 };
 mostrarBotonStart = () => {
   start.className = 'button';
 };
-
 document.getElementById('current-year').innerHTML = new Date().getFullYear();
