@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-return-assign */
 const $form = document.querySelector('#form');
 let secuenciaPc = [];
 let turnoUser = false;
@@ -19,11 +21,11 @@ const SOUNDS = {
   play4: () => sonidoCuatro.play(),
   playStart: () => sonidoStart.play(),
   playCorrect: () => sonidoCorrect.play(),
-  playWrong: () => sonidoWrong.play(),
+  playWrong: () => sonidoWrong.play()
 };
 
 function actualizarMensaje(mensaje) {
-  ($mensaje.value = mensaje);
+  $mensaje.value = mensaje;
 }
 
 function permiteClickear() {
@@ -38,11 +40,13 @@ function noPermiteClickear() {
   }
 }
 
-const actualizarNumeroRonda = (ronda) => (document.querySelector('#ronda').textContent = ronda);
+const actualizarNumeroRonda = ronda =>
+  (document.querySelector('#ronda').textContent = ronda);
 
 function turnoPc() {
   noPermiteClickear();
   setTimeout(() => {
+    let ronda;
     ronda++;
     actualizarNumeroRonda(ronda);
     actualizarMensaje('Es el turno de la computadora...');
@@ -202,7 +206,7 @@ $form.start.onclick = () => {
   turnoPc();
 };
 
-$form.querySelector('#rojo').onclick = (event) => {
+$form.querySelector('#rojo').onclick = event => {
   SOUNDS.play1();
   if (turnoUser === true) {
     turnoJugador(1);
@@ -212,7 +216,7 @@ $form.querySelector('#rojo').onclick = (event) => {
   }
 };
 
-$form.querySelector('#verde').onclick = (event) => {
+$form.querySelector('#verde').onclick = event => {
   SOUNDS.play2();
   if (turnoUser === true) {
     turnoJugador(2);
@@ -222,7 +226,7 @@ $form.querySelector('#verde').onclick = (event) => {
   }
 };
 
-$form.querySelector('#azul').onclick = (event) => {
+$form.querySelector('#azul').onclick = event => {
   SOUNDS.play3();
   if (turnoUser === true) {
     turnoJugador(3);
@@ -232,7 +236,7 @@ $form.querySelector('#azul').onclick = (event) => {
   }
 };
 
-$form.querySelector('#amarillo').onclick = (event) => {
+$form.querySelector('#amarillo').onclick = event => {
   SOUNDS.play4();
   if (turnoUser === true) {
     turnoJugador(4);
@@ -249,15 +253,15 @@ function failed() {
     text: 'Intenta nuevamente, haz click en START.',
     allowOutsideClick: true,
     allowEscapeKey: true,
-    showConfirmButton: true,
+    showConfirmButton: true
   });
 }
 
 ocultarBotonStart = () => {
-  (start.className = 'hidden');
+  start.className = 'hidden';
 };
 mostrarBotonStart = () => {
-  (start.className = 'button');
+  start.className = 'button';
 };
 
 document.getElementById('current-year').innerHTML = new Date().getFullYear();
