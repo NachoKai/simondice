@@ -42,7 +42,7 @@ function noPermiteClickear() {
   }
 }
 
-const actualizarNumeroRonda = ronda =>
+let actualizarNumeroRonda = (ronda) =>
   (document.querySelector('#ronda').textContent = ronda);
 
 function iteracionDeRandoms() {
