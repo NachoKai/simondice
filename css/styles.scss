@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
 
 * {
   -webkit-box-sizing: border-box;
   -webkit-transition: all 0.3s ease;
   box-sizing: border-box;
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
   font-size: 24px;
   font-weight: lighter;
   margin: 0;
@@ -51,7 +51,7 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
   grid-area: sector1;
-  grid-template-areas: "puntaje start pmaximo";
+  grid-template-areas: 'puntaje start pmaximo';
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-around;
@@ -85,7 +85,7 @@ a:hover {
   background-color: #fff;
   display: grid;
   grid-area: sector2;
-  grid-template-areas: "rojo verde""azul amarillo";
+  grid-template-areas: 'rojo verde' 'azul amarillo';
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: 100%;
@@ -115,7 +115,7 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
   grid-area: sector3;
-  grid-template-areas: "reiniciar continuar";
+  grid-template-areas: 'reiniciar continuar';
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-around;
@@ -261,6 +261,13 @@ footer {
   background: #e6da00;
   height: 96%;
   width: 96%;
+}
+
+.boton-rojo:hover,
+.boton-verde:hover,
+.boton-azul:hover,
+.boton-amarillo:hover {
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {

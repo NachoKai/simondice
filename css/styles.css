@@ -3,7 +3,7 @@
   -webkit-box-sizing: border-box;
   -webkit-transition: all 0.3s ease;
   box-sizing: border-box;
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
   font-size: 24px;
   font-weight: lighter;
   margin: 0;
@@ -78,7 +78,7 @@ a:hover {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   grid-area: sector1;
-      grid-template-areas: "puntaje start pmaximo";
+      grid-template-areas: 'puntaje start pmaximo';
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr;
@@ -131,7 +131,7 @@ a:hover {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: sector2;
-      grid-template-areas: "rojo verde" "azul amarillo";
+      grid-template-areas: 'rojo verde' 'azul amarillo';
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
@@ -182,7 +182,7 @@ a:hover {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: sector3;
-      grid-template-areas: "reiniciar continuar";
+      grid-template-areas: 'reiniciar continuar';
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr;
@@ -380,6 +380,13 @@ footer {
   background: #e6da00;
   height: 96%;
   width: 96%;
+}
+
+.boton-rojo:hover,
+.boton-verde:hover,
+.boton-azul:hover,
+.boton-amarillo:hover {
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {

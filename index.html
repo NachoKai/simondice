@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <title>Simon ! Nacho Caiafa</title>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+  </head>
 
-<head>
-  <title>Simon ! Nacho Caiafa</title>
-  <meta charset="utf-8" />
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-</head>
+  <body>
+    <audio id="audio-uno" src="sounds/simonSound1.mp3"></audio>
+    <audio id="audio-dos" src="sounds/simonSound2.mp3"></audio>
+    <audio id="audio-tres" src="sounds/simonSound3.mp3"></audio>
+    <audio id="audio-cuatro" src="sounds/simonSound4.mp3"></audio>
+    <audio id="audio-start" src="sounds/start.wav"></audio>
+    <audio id="audio-correct" src="sounds/correct.mp3"></audio>
+    <audio id="audio-wrong" src="sounds/wrong.wav"></audio>
 
-<body>
-  <audio id="audio-uno" src="sounds/simonSound1.mp3"></audio>
-  <audio id="audio-dos" src="sounds/simonSound2.mp3"></audio>
-  <audio id="audio-tres" src="sounds/simonSound3.mp3"></audio>
-  <audio id="audio-cuatro" src="sounds/simonSound4.mp3"></audio>
-  <audio id="audio-start" src="sounds/start.wav"></audio>
-  <audio id="audio-correct" src="sounds/correct.mp3"></audio>
-  <audio id="audio-wrong" src="sounds/wrong.wav"></audio>
-
-  <form class="grid-container" id="form">
-    <div class="row">
-      <img class="title" src="img/title.png" alt="Simon!" />
-    </div>
-    <div class="sector1">
-      <div class="puntaje">
-        <div class="p">
-          <label for="puntaje" id="plabel">Puntaje</label>
-          <input type="text" name="puntaje" id="puntaje" value="0" disabled />
+    <form class="grid-container" id="form">
+      <div class="row">
+        <img class="title" src="img/title.png" alt="Simon!" />
+      </div>
+      <div class="sector1">
+        <div class="puntaje">
+          <div class="p">
+            <label for="puntaje" id="plabel">Puntaje</label>
+            <input type="text" name="puntaje" id="puntaje" value="0" disabled />
+          </div>
+          <div class="pm">
+            <label for="pmaximo" id="pmlabel">P. Máximo</label>
+            <input type="text" name="pmaximo" id="pmaximo" value="0" disabled />
+          </div>
         </div>
-        <div class="pm">
-          <label for="pmaximo" id="pmlabel">P. Máximo</label>
-          <input type="text" name="pmaximo" id="pmaximo" value="0" disabled />
+      </div>
+
+      <div class="colores">
+        <div class="sector2">
+          <div class="boton-rojo" id="rojo"></div>
+          <div class="boton-verde" id="verde"></div>
+          <div class="boton-azul" id="azul"></div>
+          <div class="boton-amarillo" id="amarillo"></div>
         </div>
-        <div class="rondas">
-          <p>Ronda # <strong id="ronda">0</strong></p>
+      </div>
+
+      <div class="sector4">
+        <div class="mensaje">
+          Mensaje: <input type="text" name="mensaje" id="mensaje" disabled />
+        </div>
+
+        <div class="start">
+          <input type="button" value="START" id="start" class="button" />
         </div>
       </div>
-    </div>
+    </form>
 
-    <div class="colores">
-      <div class="sector2">
-        <div class="boton-rojo" id="rojo"></div>
-        <div class="boton-verde" id="verde"></div>
-        <div class="boton-azul" id="azul"></div>
-        <div class="boton-amarillo" id="amarillo"></div>
-      </div>
-    </div>
+    <footer>
+      <a href="https://github.com/NachoKai" class="link">Nacho Caiafa </a>
+      &copy; <span id="current-year"></span>
+    </footer>
 
-    <div class="sector4">
-      <div class="mensaje">
-        Mensaje: <input type="text" name="mensaje" id="mensaje" disabled />
-      </div>
-
-      <div class="start">
-        <input type="button" value="START" id="start" class="button" />
-      </div>
-    </div>
-  </form>
-
-  <footer>
-    <a href="https://github.com/NachoKai" class="link">Nacho Caiafa </a> &copy; <span id="current-year"></span>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-</body>
-
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  </body>
 </html>

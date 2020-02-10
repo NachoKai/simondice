@@ -6,7 +6,6 @@ const $form = document.querySelector('#form');
 let secuenciaPc = [];
 let turnoUser = false;
 let turnos = 0;
-
 const sonidoUno = document.querySelector('#audio-uno');
 const sonidoDos = document.querySelector('#audio-dos');
 const sonidoTres = document.querySelector('#audio-tres');
@@ -41,9 +40,6 @@ function noPermiteClickear() {
     turnoUser = false;
   }
 }
-
-let actualizarNumeroRonda = (ronda) =>
-  (document.querySelector('#ronda').textContent = ronda);
 
 function iteracionDeRandoms() {
   for (let i = 0; i < 25; i++) {
@@ -124,9 +120,6 @@ function eligeRandom() {
 function turnoPc() {
   noPermiteClickear();
   setTimeout(() => {
-    let ronda;
-    ronda++;
-    actualizarNumeroRonda(ronda);
     actualizarMensaje('Es el turno de la computadora...');
   }, 900);
   setTimeout(() => eligeRandom(), 900);
@@ -210,11 +203,9 @@ $form.start.onclick = () => {
   SOUNDS.playStart();
   gameStart();
   noPermiteClickear();
-  actualizarNumeroRonda('-');
   puntaje.value = 0;
   secuenciaPc = [];
   turnos = 0;
-  ronda = 0;
   actualizarMensaje('Suerte!');
   ocultarBotonStart();
   turnoPc();
