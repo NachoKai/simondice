@@ -61,6 +61,9 @@ a:hover {
 }
 
 .start {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
   grid-area: start;
   padding: 5px;
 }
@@ -140,6 +143,8 @@ a:hover {
 }
 
 .mensaje {
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
   background-color: #000;
   color: #fff;
@@ -149,6 +154,7 @@ a:hover {
   justify-content: center;
   padding: 5px;
   text-align: center;
+  width: 320px;
 }
 
 footer {
@@ -187,13 +193,16 @@ footer {
 }
 
 #mensaje {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
   align-items: center;
   background-color: #000;
   border: none;
   color: #fff;
   justify-content: center;
   text-align: center;
-  width: 280px;
+  width: 320px;
 }
 
 .boton-rojo {
