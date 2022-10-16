@@ -4,7 +4,7 @@
   "description": "•HTML  \r •CSS (Scss, Grid, Flexbox, Responsive Design)  \r •Javascript  \r •Google Fonts",
   "main": "index.js",
   "dependencies": {
-    "cypress": "^3.7.0"
+    "cypress": "^10.10.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
